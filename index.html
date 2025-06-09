@@ -12,6 +12,8 @@
             <div class="logo">
                 <img src="assets/images/Copy of Sodada logo 2022 (Color).jpg" alt="SODADA Hair + Yoga Logo" class="logo-img">
             </div>
+            
+            <!-- Desktop Navigation -->
             <ul class="nav-links">
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#services">SERVICES</a></li>
@@ -19,7 +21,25 @@
                 <li><a href="#yoga">YOGA</a></li>
             </ul>
             <button class="book-now-btn">BOOK NOW</button>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#memberships">MEMBERSHIPS</a></li>
+                <li><a href="#yoga">YOGA</a></li>
+                <li><button class="book-now-btn mobile-book-btn">BOOK NOW</button></li>
+            </ul>
+        </div>
     </header>    <main>
         <section id="hero" class="hero">
             <div class="hero-content">
@@ -62,5 +82,33 @@
     </main>    <footer>
         <p>&copy; 2025 SODADA Hair + Yoga. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
