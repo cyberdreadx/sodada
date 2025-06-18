@@ -4,255 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SODADA Holistic Beauty & Wellness</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.base.css">
+    <link rel="stylesheet" href="css/styles.layout.css">
+    <link rel="stylesheet" href="css/styles.sections.css">
+    <link rel="stylesheet" href="css/styles.menu.css">
+    <link rel="stylesheet" href="css/styles.mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>        <nav>
+    <header>
+        <nav>
             <div class="logo">
-                <img src="assets/images/Copy of Sodada logo 2022 (Color).jpg" alt="SODADA Hair + Yoga Logo" class="logo-img">
+                <img src="/css/assets/logos/logo.jpg" alt="SODADA Logo" class="logo-img">
             </div>
-              <!-- Desktop Navigation -->            <ul class="nav-links">
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="#yoga">YOGA</a></li>
-                <li><a href="#coaching">COACHING</a></li>
-                <li><a href="#about">ABOUT</a></li>
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#beauty">Beauty</a></li>
+                <li><a href="#wellness">Wellness</a></li>
+                <li><a href="#memberships">Memberships</a></li>
+                <li><a href="#academy">Academy</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?oiid=sv%3A10349758&share&pId=376813" class="book-now-btn" target="_blank">BOOK DISCOVERY CALL</a>
-            
             <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle">
+            <button class="mobile-menu-toggle" aria-label="Open mobile menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
         </nav>
-          <!-- Mobile Navigation Menu -->
+        <!-- Mobile Navigation Menu -->
         <div class="mobile-nav">
             <ul class="mobile-nav-links">
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="#yoga">YOGA</a></li>
-                <li><a href="#coaching">COACHING</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?oiid=sv%3A10349758&share&pId=376813" class="book-now-btn mobile-book-btn" target="_blank">BOOK DISCOVERY CALL</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#beauty">Beauty</a></li>
+                <li><a href="#wellness">Wellness</a></li>
+                <li><a href="#memberships">Memberships</a></li>
+                <li><a href="#academy">Academy</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-    </header>    <main>
+    </header>
+    <main>
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>SODADA HOLISTIC BEAUTY & WELLNESS</h1>
+                    <h1>Sodada Holistic Beauty & Wellness</h1>
                     <h2 class="hero-subtitle">Where Beauty Meets Breath. Where Craft Becomes Ritual.</h2>
-                    <p class="hero-description">Welcome to Sodada, a holistic beauty and wellness brand rooted in movement, mastery and intuitive self-expression. From luxury hair artistry to yoga and lifestyle coaching, Sodada is a container for embodied transformation and elevated living.</p>
+                    <p class="hero-description">Welcome to Sodada, where holistic beauty meets intentional living. Through expert hair artistry, yoga, and coaching, Sodada creates a space for embodied transformation and the next evolution of you.</p>
                     <p class="hero-tagline">Live well. Look well. Be well.</p>
                     <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?oiid=sv%3A10349758&share&pId=376813" class="cta-btn primary" target="_blank">Book Complimentary Discovery Call</a>
                 </div>
                 <div class="hero-image">
-                    <div class="hero-image-placeholder">
-                        <!-- Hero image will go here -->
-                    </div>
+                    <!-- Replace with actual hero image if available -->
+                    <img src="/css/assets/images/image1.jpg" alt="Sodada Hero" style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
                 </div>
             </div>
         </section>
 
-        <!-- Featured Services Section -->
-        <section id="services" class="featured-services">
+        <!-- Featured Services Preview (Wireframe style) -->
+        <section id="featured-preview" class="featured-preview">
             <div class="section-header">
-                <h2>WHAT WE DO</h2>
-                <p class="section-subtitle">Featured Services</p>
+                <h2>Featured Services Preview</h2>
             </div>
-
-            <!-- Hair Services -->
-            <div class="service-category">
-                <h3>Precision Haircutting</h3>
-                <p class="category-description">At Sodada, every haircut is a reflection of where you're at and where you're going. Whether you're in need of something quick and clean, custom and sculpted, or ready to fully transform—there's a seat for you here.</p>
-                
-                <div class="service-grid">                    <div class="service-card">
-                        <h4>The Bang Trim</h4>
-                        <p class="price">$33</p>
-                        <p>A quick refresh to keep your fringe sharp, balanced and flattering. Whether it's a trim or style makeover, expect a precise bang trim customized to your face shape and style—no full cut needed.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A5950432&share&pId=376813" class="cta-btn secondary" target="_blank">Book Now</a>
-                    </div>                    <div class="service-card">
-                        <h4>The Barber Cut</h4>
-                        <p class="price">$77</p>
-                        <p>For very short styles, including skin fades and clean cuts. This service includes a tailored consultation, cleansing wash, precision haircut and styling with premium grooming products.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?oiid=sv%3A19414631&share&pId=376813" class="cta-btn secondary" target="_blank">Book Now</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h4>The Short Cut</h4>
-                        <p class="price">$122</p>
-                        <p>A polished, low-maintenance shape-up for bobs and short styles. Includes a cleansing wash, precision cut, and tailored styling to enhance your natural movement.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10099916&share&pId=376813" class="cta-btn secondary" target="_blank">Book Now</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h4>The Long Cut</h4>
-                        <p class="price">$166</p>
-                        <p>A fully sculpted haircut designed for long hair, tailored to your features, texture and energy. Perfect for those seeking shape, refinement, and artistry—without losing length.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A22967453&share&pId=376813" class="cta-btn secondary" target="_blank">Book Now</a>
-                    </div>
-                    
-                    <div class="service-card featured">
-                        <h4>The Transformation</h4>
-                        <p class="price">$333+</p>
-                        <p>Ready to let go of what isn't serving you? Includes soulful consultation, precision haircut, healing add-ons, and holistic lifestyle coaching. Walk out clear, confident and renewed.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A5878144&share&pId=376813" class="cta-btn primary" target="_blank">Book Now</a>
-                    </div>
-                </div>
-                
-                <p class="service-cta">Book the cut that meets you where you are—and let the rest unfold from there.</p>
-            </div>
-
-            <!-- Color Services -->
-            <div class="service-category">
-                <h3>Seamless Color</h3>
-                <p class="category-description">Holistic, health-conscious color. Customized tones. Rooted in beauty, aligned with energy.</p>                <div class="service-grid">
-                    <div class="service-card">
-                        <h4>Gloss Refresh</h4>
-                        <p class="price">$88</p>
-                        <p>A shine-enhancing toner to revive dull ends, neutralize brassiness, or refresh faded tones. Ideal between full color services.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A14572631&share&pId=376813" class="cta-btn secondary" target="_blank">Book Now</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h4>Root Touch-Up</h4>
-                        <p class="price">$122</p>
-                        <p>Covers new growth and restores consistency from scalp to strand. Best for gray coverage or single-tone maintenance.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A9713417&share&pId=376813" class="cta-btn secondary" target="_blank">Book Now</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h4>All Over Permanent Color</h4>
-                        <p class="price">$188+</p>
-                        <p>A single, custom-blended shade applied from roots to ends for a seamless, uniform and permanent look.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10460869&share&pId=376813" class="cta-btn secondary" target="_blank">Book Now</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h4>Money Piece Retouch</h4>
-                        <p class="price">$222+</p>
-                        <p>A quick, high-impact color refresh using just a handful of foils to brighten and define your parting face frame. Perfect for in-between visits.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10542404&share&pId=376813" class="cta-btn secondary" target="_blank">Book Now</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h4>Halo Dimensional Color</h4>
-                        <p class="price">$444+</p>
-                        <p>Low-maintenance, dimensional color that adds subtle brightness around the face, parting, and hairline.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A14572769&share&pId=376813" class="cta-btn secondary" target="_blank">Book Now</a>
-                    </div>
-                    
-                    <div class="service-card featured">
-                        <h4>Full Dimensional Color</h4>
-                        <p class="price">$777+</p>
-                        <p>A dramatic, customized color transformation for those ready to completely reinvent their look. High-impact color with integrity.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10542401&share&pId=376813" class="cta-btn primary" target="_blank">Book Now</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h4>Corrective Color</h4>
-                        <p class="price">$133/hr</p>
-                        <p>For anyone needing to fix problematic color. From banding to uneven tones or major changes, this session includes full-tone adjustment and treatments.</p>
-                        <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A13960096&share&pId=376813" class="cta-btn secondary" target="_blank">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Yoga Section -->
-        <section id="yoga" class="yoga-section">
-            <div class="section-header">
-                <h2>Yoga</h2>
-                <p class="section-subtitle">Where movement meets mindset. Come home to your body, energy, and breath.</p>
-            </div>
-              <div class="service-grid">
-                <div class="service-card">
-                    <h4>Private 1:1 Session</h4>
-                    <p class="price">$122</p>
-                    <p>A personalized 60-minute session designed around your body, goals, and energy. Includes mindful movement, breathwork, and gentle hands-on adjustments.</p>
-                    <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A13710036&share&pId=376813" class="cta-btn secondary" target="_blank">Book Session</a>
-                </div>
-                  <div class="service-card featured">
-                    <h4>10 Private Sessions</h4>
-                    <p class="price">$1,111</p>
-                    <p>A full wellness series to support healing, flexibility, strength, and balance. Includes breathwork and intention coaching.</p>
-                    <a href="https://www.fresha.com/book-now/sodada-ftq5k815/paid-plans?id=3025411&share&pId=376813" class="cta-btn primary" target="_blank">Book Series</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Coaching Section -->
-        <section id="coaching" class="coaching-section">
-            <div class="section-header">
-                <h2>Lifestyle, Beauty & Business</h2>
-                <h3>Grow With Sodada</h3>
-                <p class="section-subtitle">Whether you're pivoting, expanding, healing or rising—you deserve a coach who sees all of you. This membership is for the bold, the brave and the driven who are done playing small.</p>
-            </div>
-            
-            <div class="coaching-content">
-                <div class="coaching-text">
-                    <h4>You're Not Lost. You're Evolving.</h4>
-                    <p>Our approach blends strategic business planning with intuitive, holistic guidance. We help solopreneurs, creatives, service providers and visionaries upgrade their income, workflow, mindset and lifestyle without burning out.</p>
-                    
-                    <div class="membership-details">
-                        <h5>Monthly Membership - $333/month</h5>
-                        <ul>
-                            <li>✅ Monday Momentum Mastermind (Live on Google Meet)</li>
-                            <li>✅ 1:1 Private Strategy Session</li>
-                            <li>✅ Worksheets + Strategy Tools</li>
-                            <li>✅ WhatsApp Group: Announcements + Coaching Chat</li>
-                            <li>✅ Instagram Inspo Chat</li>
-                            <li>✅ Growth Assignments + Celebration Rituals</li>
-                            <li>✅ Bonus Resources</li>
-                        </ul>
-                    </div>
-                </div>
-                  <div class="coaching-cta">
-                    <a href="https://www.fresha.com/book-now/sodada-ftq5k815/paid-plans?id=3148124&share&pId=376813" class="cta-btn primary" target="_blank">Apply for Membership</a>
-                    <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?oiid=sv%3A10349758&share&pId=376813" class="cta-btn secondary" target="_blank">Book Discovery Call</a>
-                </div>
-            </div>
+            <ul class="featured-list">
+                <li>Haircuts from $122</li>
+                <li>Yoga from $122</li>
+                <li>Coaching from $333/month</li>
+            </ul>
+            <a href="#services" class="cta-btn secondary">View All Services</a>
         </section>
 
         <!-- Testimonials Section -->
         <section id="testimonials" class="testimonials">
             <div class="section-header">
-                <h2>Client Love</h2>
+                <h2>Real Clients, Real Stories</h2>
+                <p class="testimonials-subheadline">From thoughtful follow-ups to five-star reviews, these stories reflect the personalized care, connection, and elevated experience at the heart of Sodada.</p>
             </div>
-            
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p>"Solange helped me elevate my business and finally own my worth."</p>
-                    <cite>– Beauty Entrepreneur</cite>
+                    <div class="testimonial-category">Wellness / Yoga</div>
+                    <blockquote>“In just 3 months, I’m seeing a huge difference in my mobility, stability, and most importantly mind-body connection. I’m noticing a decrease in anxiety and living more mindfully. Solange tailors each session based on my needs and past injuries. I can’t recommend her enough.”</blockquote>
+                    <cite>— Ruta S.</cite>
                 </div>
-                
                 <div class="testimonial-card">
-                    <p>"After just one session, I felt clearer and more grounded than I had in months."</p>
-                    <cite>– Wellness Coach</cite>
+                    <div class="testimonial-category">Hair / Beauty</div>
+                    <blockquote>“Every cut and color session has felt like a collaboration and a learning experience. Solange gently guides with artistic vision and always makes me feel beautiful and confident. Her background in art helps her create magic with hair.”</blockquote>
+                    <cite>— Aline S.</cite>
                 </div>
-                
                 <div class="testimonial-card">
-                    <p>"This is like therapy, business consulting, and divine feminine guidance all in one."</p>
-                    <cite>– Artist + Coach</cite>
+                    <div class="testimonial-category">Coaching / Business</div>
+                    <blockquote>“This mastermind is like therapy, but for your business. I went from overwhelmed and unsure to clear, focused, and supported. Solange always drops the truth bomb I need to keep moving forward.”</blockquote>
+                    <cite>— Pati L.</cite>
                 </div>
+            </div>
+            <div class="testimonials-cta">
+                <a href="#" class="cta-btn secondary">Read More Client Stories &rarr;</a>
             </div>
         </section>
 
-        <!-- Final CTA Section -->
-        <section id="final-cta" class="final-cta">
-            <div class="cta-content">
-                <h2>Ready for the next version of you?</h2>
-                <p>Whether you need a powerful reset or a supportive strategy container, let's connect.</p>                <div class="cta-buttons">
-                    <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?oiid=sv%3A6770298&share&pId=376813" class="cta-btn primary" target="_blank">Book a Session</a>
-                    <a href="https://www.fresha.com/book-now/sodada-ftq5k815/paid-plans?id=3148124&share&pId=376813" class="cta-btn secondary" target="_blank">Apply for Membership</a>
-                    <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?oiid=sv%3A10349758&share&pId=376813" class="cta-btn secondary" target="_blank">Contact</a>
-                </div>
+        <!-- As Seen In Section -->
+        <section id="as-seen-in" class="as-seen-in">
+            <div class="section-header">
+                <h2>As Seen In</h2>
+            </div>
+            <div class="press-logos">
+                <img src="assets/images/press-logo1.png" alt="Press Logo 1" class="press-logo" style="width:120px;height:auto;opacity:0.7;">
+                <img src="assets/images/press-logo2.png" alt="Press Logo 2" class="press-logo" style="width:120px;height:auto;opacity:0.7;">
+                <img src="assets/images/press-logo3.png" alt="Press Logo 3" class="press-logo" style="width:120px;height:auto;opacity:0.7;">
+                <!-- Add more logos as needed -->
             </div>
         </section>
-    </main><footer>
-        <p>&copy; 2025 SODADA Hair + Yoga. All rights reserved.</p>
+
+        <!-- Instagram Feed Section -->
+        <section id="instagram" class="instagram-feed">
+            <div class="section-header">
+                <h2>Instagram</h2>
+            </div>
+            <div class="instagram-embed">
+                <!-- Example Instagram embed or grid -->
+                <a href="https://instagram.com/sodadahair/" target="_blank" rel="noopener" class="cta-btn secondary">@sodadahair</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-newsletter">
+            <h3>✨ Join the Movement. Elevate Everything.</h3>
+            <p>Get curated rituals, mindset shifts, and early access to exclusive Sodada experiences — where beauty, wellness, and aligned living meet.</p>
+            <a href="#" class="cta-btn primary">I'm In</a>
+        </div>
+        <div class="footer-sitemap">
+            <ul class="footer-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#beauty">Beauty</a></li>
+                <li><a href="#hair">Hair</a></li>
+                <li><a href="#wellness">Wellness</a></li>
+                <li><a href="#yoga">Yoga</a></li>
+                <li><a href="#coaching">Coaching</a></li>
+                <li><a href="#memberships">Memberships</a></li>
+                <li><a href="#signature-membership">Signature Membership</a></li>
+                <li><a href="#academy">Academy</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#press">Press</a></li>
+                <li><a href="#terms">Terms & Policies</a></li>
+                <li><a href="#newsletter">Newsletter Sign-Up</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#social">Social Links</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 SODADA Holistic Beauty & Wellness. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
@@ -261,9 +174,15 @@
         const mobileNav = document.querySelector('.mobile-nav');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
 
-        mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             mobileMenuToggle.classList.toggle('active');
             mobileNav.classList.toggle('active');
+            if (mobileNav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         });
 
         // Close mobile menu when a link is clicked
@@ -271,6 +190,7 @@
             link.addEventListener('click', () => {
                 mobileMenuToggle.classList.remove('active');
                 mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
 
@@ -279,6 +199,7 @@
             if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
                 mobileMenuToggle.classList.remove('active');
                 mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
     </script>

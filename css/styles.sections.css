@@ -1,0 +1,165 @@
+/* Section-specific styles: hero, featured, testimonials, as-seen-in, instagram */
+.hero {
+    background: linear-gradient(135deg, #f8f4f4 0%, #f0eeee 100%);
+    padding: 8rem 2rem 6rem;
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text .cta-btn {
+    display: block;
+    margin: 2rem auto 0 auto;
+}
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #d4a5a5;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.hero-tagline {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.featured-preview {
+    padding: 2.5rem 0.5rem 2rem;
+    text-align: center;
+}
+
+.featured-preview .cta-btn {
+    display: block;
+    margin: 0 auto;
+}
+}
+.featured-list {
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+.featured-list li {
+    font-size: 1.1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+.featured-list li:last-child {
+    border-bottom: none;
+}
+
+.testimonials {
+    padding: 6rem 2rem;
+    background: #f8f4f4;
+}
+
+.testimonials-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.testimonials-cta .cta-btn {
+    display: inline-block;
+    margin: 0 auto;
+}
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.as-seen-in {
+    padding: 2.5rem 0.5rem 2rem;
+}
+.press-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+}
+.press-logo {
+    width: 120px;
+    height: auto;
+    opacity: 0.7;
+}
+
+.instagram-feed {
+    padding: 2.5rem 0.5rem 2rem;
+}
+
+.instagram-embed {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.instagram-embed .cta-btn {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/* Footer Newsletter CTA */
+.footer-newsletter {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer-newsletter .cta-btn {
+    display: inline-block;
+    margin: 1.5rem auto 0 auto;
+}
+}
+.instagram-embed .cta-btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 1rem auto 0;
+    display: block;
+}
