@@ -22,7 +22,6 @@
     display: block;
     margin: 2rem auto 0 auto;
 }
-}
 
 .hero-text h1 {
     font-size: 2.8rem;
@@ -72,7 +71,7 @@
     display: block;
     margin: 0 auto;
 }
-}
+
 .featured-list {
     padding-left: 0;
     margin-bottom: 1.5rem;
@@ -101,7 +100,7 @@
     display: inline-block;
     margin: 0 auto;
 }
-}
+
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -156,7 +155,7 @@
     display: inline-block;
     margin: 1.5rem auto 0 auto;
 }
-}
+
 .instagram-embed .cta-btn {
     width: 100%;
     max-width: 320px;
