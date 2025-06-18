@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty | SODADA Holistic Beauty & Wellness</title>
+    <link rel="stylesheet" href="css/styles.base.css">
+    <link rel="stylesheet" href="css/styles.layout.css">
+    <link rel="stylesheet" href="css/styles.sections.css">
+    <link rel="stylesheet" href="css/styles.menu.css">
+    <link rel="stylesheet" href="css/styles.mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+    /* General Styling */
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+
+    /* Hero Section */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        background-color: #fff;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        margin: 2rem auto;
+        max-width: 1200px;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #666;
+        max-width: 800px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Service Sections */
+    .services {
+        padding: 2rem;
+        background-color: #fff;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        margin: 2rem auto;
+        max-width: 1200px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #333;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .service-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .service-list li {
+        font-size: 1rem;
+        color: #444;
+        background-color: #f9f9f9;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-list a {
+        color: #007BFF;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .service-list a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer Styling */
+    .footer {
+        text-align: center;
+        padding: 2rem;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .footer-newsletter h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .footer-newsletter p {
+        font-size: 1rem;
+        color: #ccc;
+    }
+
+    .footer-menu {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-menu a {
+        color: #007BFF;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .footer-menu a:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .hero {
+            padding: 1rem;
+        }
+
+        .hero-text h1 {
+            font-size: 2rem;
+        }
+
+        .hero-text h2 {
+            font-size: 1.2rem;
+        }
+
+        .services {
+            padding: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+        }
+
+        .service-list li {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div id="nav-include"></div>
+    </header>
+    <script>
+    // Simple HTML include for nav.html
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-include').innerHTML = data;
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+        if (mobileMenuToggle && mobileNav) {
+          mobileMenuToggle.addEventListener('click', (e) => {
+              e.stopPropagation();
+              mobileMenuToggle.classList.toggle('active');
+              mobileNav.classList.toggle('active');
+              if (mobileNav.classList.contains('active')) {
+                  document.body.style.overflow = 'hidden';
+              } else {
+                  document.body.style.overflow = '';
+              }
+          });
+          mobileNavLinks.forEach(link => {
+              link.addEventListener('click', () => {
+                  mobileMenuToggle.classList.remove('active');
+                  mobileNav.classList.remove('active');
+                  document.body.style.overflow = '';
+              });
+          });
+          document.addEventListener('click', (e) => {
+              if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+                  mobileMenuToggle.classList.remove('active');
+                  mobileNav.classList.remove('active');
+                  document.body.style.overflow = '';
+              }
+          });
+        }
+      });
+    </script>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Artistry in Ritual</h1>
+                    <h2>Hair is more than aesthetics — it’s energy, presence, and self-expression. At Sodada, we offer elevated, refined styling and holistic haircare through curated sessions for aligned living and intentional beauty.</h2>
+                </div>
+                <div class="hero-image">
+                    <img src="css/assets/images/beauty/iron.jpg" alt="Iron Styling" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+                </div>
+            </div>
+        </section>
+
+        <!-- Haircutting Services -->
+        <section id="haircutting-services" class="services">
+            <div class="section-header">
+                <h2>Haircutting Services</h2>
+            </div>
+            <ul class="service-list">
+                <li><strong>The Bang Trim — $33</strong><br>A quick refresh to keep your fringe sharp, balanced and flattering. <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A5950432&share&pId=376813">[Link to Book]</a></li>
+                <li><strong>The Barber Cut — $77</strong><br>For very short styles, including skin fades and clean cuts. <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?oiid=sv%3A19414631&share&pId=376813">[Link to Book]</a></li>
+                <li><strong>The Short Cut — $122</strong><br>A polished, low-maintenance shape-up for bobs and short styles. <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10099916&share&pId=376813">[Link to Book]</a></li>
+                <li><strong>The Long Cut — $166</strong><br>A fully sculpted haircut designed for long hair. <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A22967453&share&pId=376813">[Link to Book]</a></li>
+                <li><strong>The Transformation — $333+</strong><br>Ready to let go of what isn't serving you? <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A5878144&share&pId=376813">[Link to Book]</a></li>
+            </ul>
+        </section>
+
+        <!-- Image under Featured Services -->
+        <div class="featured-image" style="text-align:center; margin: 2rem auto;">
+            <img src="css/assets/images/beauty/Blowdry3.jpg" alt="Sodada Featured" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+        </div>
+
+        <!-- Color Services -->
+        <section id="color-services" class="services">
+            <div class="section-header">
+                <h2>Color Services</h2>
+            </div>
+            <ul class="service-list">
+                <li><strong>Gloss Refresh — $88</strong><br>A shine-enhancing toner to revive dull ends. <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A14572631&share&pId=376813">[Link to Book]</a></li>
+                <li><strong>Root Touch-Up — $122</strong><br>Covers new growth and restores consistency. <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A9713417&share&pId=376813">[Link to Book]</a></li>
+                <li><strong>All Over Permanent Color — $188+</strong><br>A single, custom-blended shade applied from roots to ends. <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10460869&share&pId=376813">[Link to Book]</a></li>
+                <li><strong>Money Peace Retouch — $222+</strong><br>A high-impact refresh using a few foils. <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10542404&share&pId=376813">[Link to Book]</a></li>
+                <li><strong>Halo Dimensional Color — $444+</strong><br>Adds soft highlights or lowlights. <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A14572769&share&pId=376813">[Link to Book]</a></li>
+            </ul>
+        </section>
+
+        <!-- Add-On Rituals -->
+        <section id="add-on-rituals" class="services">
+            <div class="section-header">
+                <h2>Add-On Rituals</h2>
+            </div>
+            <ul class="service-list">
+                <li><strong>Scalp + Hair Detox Ritual — $77</strong><br>A nourishing reset for the scalp, hair, and nervous system. <a href="#">[Link to Book]</a></li>
+                <li><strong>Blowdry — $55</strong><br>For a natural look that highlights your most authentic self. <a href="#">[Link to Book]</a></li>
+                <li><strong>Heat Styling Finish — $44</strong><br>Add flat iron or curling finish to any service. <a href="#">[Link to Book]</a></li>
+            </ul>
+        </section>
+    </main>
+    <!-- Image above Footer -->
+    <div class="footer-image" style="text-align:center; margin: 2rem 0;">
+        <img src="css/assets/images/image3.jpg" alt="Sodada Mood" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+    </div>
+
+    <footer>
+        <div class="footer-newsletter">
+            <h3>✨ Join the Movement. Elevate Everything.</h3>
+            <p>Get curated rituals, mindset shifts, and early access to exclusive Sodada experiences — where beauty, wellness, and aligned living meet.</p>
+            <a href="#" class="cta-btn primary">I'm In</a>
+        </div>
+        <div class="footer-sitemap">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beauty.html">Beauty</a></li>
+                <li><a href="hair.html">Hair</a></li>
+                <li><a href="wellness.html">Wellness</a></li>
+                <li><a href="yoga.html">Yoga</a></li>
+                <li><a href="coaching.html">Coaching</a></li>
+                <li><a href="memberships.html">Memberships</a></li>
+                <li><a href="signature-membership.html">Signature Membership</a></li>
+                <li><a href="academy.html">Academy</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="terms.html">Terms & Policies</a></li>
+                <li><a href="newsletter.html">Newsletter Sign-Up</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="social.html">Social Links</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 SODADA Holistic Beauty & Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
