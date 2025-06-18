@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,179 +12,209 @@
     <link rel="stylesheet" href="css/styles.mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-    .memberships-hero {
-        text-align: center;
-        margin: 10.5rem 0 2.5rem 0;
-    }
-    .memberships-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #3a3aee;
-        letter-spacing: 0.01em;
-        font-family: 'Poppins', sans-serif;
-    }
-    .memberships-section {
-        background: linear-gradient(120deg, #f9f9f9 80%, #f3f0ff 100%);
-        border-radius: 18px;
-        box-shadow: 0 6px 32px rgba(80, 60, 120, 0.08);
-        margin: 2.5rem auto 2rem auto;
-        max-width: 1100px;
-        padding: 2.5rem 1.5rem 2rem 1.5rem;
-    }
-    .memberships-section h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #2d2d2d;
-        margin-bottom: 0.2rem;
-        text-align: center;
-    }
-    .memberships-section .section-tagline {
-        font-size: 1.2rem;
-        color: #7c4dff;
-        font-weight: 600;
-        margin-bottom: 0.2rem;
-        text-align: center;
-    }
-    .memberships-section .section-subheader {
-        font-size: 1.08rem;
-        color: #6a6a6a;
-        margin-bottom: 0.8rem;
-        text-align: center;
-    }
-    .membership-card {
-        background: #fff;
-        border-radius: 14px;
-        box-shadow: 0 2px 16px rgba(80, 60, 120, 0.07);
-        padding: 2rem 1.5rem 1.5rem 1.5rem;
-        margin: 2rem auto 2rem auto;
-        max-width: 600px;
-        display: flex;
-        flex-direction: column;
-        gap: 1.1rem;
-        border: 1.5px solid #f3f0ff;
-        position: relative;
-    }
-    .membership-card h3 {
-        font-size: 1.3rem;
-        color: #3a3aee;
-        font-weight: 600;
-        margin-bottom: 0.3rem;
-    }
-    .membership-card .price {
-        color: #7c4dff;
-        font-size: 1.08rem;
-        font-weight: 500;
-        margin-left: 0.5rem;
-    }
-    .membership-card ul {
-        margin-left: 1.2rem;
-        color: #555;
-        font-size: 0.98rem;
-    }
-    .membership-card .cta-btn {
-        margin-top: 0.7rem;
-        margin-right: 0.7rem;
-    }
-    .membership-form {
-        background: #f3f0ff;
-        border-radius: 12px;
-        padding: 1.5rem;
-        max-width: 500px;
-        margin: 2rem auto 2rem auto;
-        box-shadow: 0 2px 12px rgba(80, 60, 120, 0.07);
-    }
-    .membership-form label {
-        display: block;
-        margin-bottom: 0.5rem;
-        color: #444;
-        font-weight: 500;
-    }
-    .membership-form input, .membership-form select {
-        width: 100%;
-        padding: 0.7rem;
-        margin-bottom: 1rem;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-        font-size: 1rem;
-    }
-    .membership-form button {
-        width: 100%;
-        padding: 0.9rem;
-        background: #7c4dff;
-        color: #fff;
-        border: none;
-        border-radius: 6px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.18s;
-    }
-    .membership-form button:hover {
-        background: #3a3aee;
-    }
-    @media (max-width: 600px) {
         .memberships-hero {
-            margin-top: 6.5rem;
+            text-align: center;
+            margin: 10.5rem 0 2.5rem 0;
         }
+
+        .memberships-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3a3aee;
+            letter-spacing: 0.01em;
+            font-family: 'Poppins', sans-serif;
+        }
+
         .memberships-section {
-            padding: 1.2rem 0.2rem;
+            background: linear-gradient(120deg, #f9f9f9 80%, #f3f0ff 100%);
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(80, 60, 120, 0.08);
+            margin: 2.5rem auto 2rem auto;
+            max-width: 1100px;
+            padding: 2.5rem 1.5rem 2rem 1.5rem;
         }
+
+        .memberships-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d2d2d;
+            margin-bottom: 0.2rem;
+            text-align: center;
+        }
+
+        .memberships-section .section-tagline {
+            font-size: 1.2rem;
+            color: #7c4dff;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            text-align: center;
+        }
+
+        .memberships-section .section-subheader {
+            font-size: 1.08rem;
+            color: #6a6a6a;
+            margin-bottom: 0.8rem;
+            text-align: center;
+        }
+
         .membership-card {
-            padding: 1.2rem 0.7rem 1rem 0.7rem;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(80, 60, 120, 0.07);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            margin: 2rem auto 2rem auto;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            border: 1.5px solid #f3f0ff;
+            position: relative;
         }
-    }
+
+        .membership-card h3 {
+            font-size: 1.3rem;
+            color: #3a3aee;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .membership-card .price {
+            color: #7c4dff;
+            font-size: 1.08rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+
+        .membership-card ul {
+            margin-left: 1.2rem;
+            color: #555;
+            font-size: 0.98rem;
+        }
+
+        .membership-card .cta-btn {
+            margin-top: 0.7rem;
+            margin-right: 0.7rem;
+        }
+
+        .membership-form {
+            background: #f3f0ff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            max-width: 500px;
+            margin: 2rem auto 2rem auto;
+            box-shadow: 0 2px 12px rgba(80, 60, 120, 0.07);
+        }
+
+        .membership-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #444;
+            font-weight: 500;
+        }
+
+        .membership-form input,
+        .membership-form select {
+            width: 100%;
+            padding: 0.7rem;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .membership-form button {
+            width: 100%;
+            padding: 0.9rem;
+            background: #7c4dff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.18s;
+        }
+
+        .membership-form button:hover {
+            background: #3a3aee;
+        }
+
+        @media (max-width: 600px) {
+            .memberships-hero {
+                margin-top: 6.5rem;
+            }
+
+            .memberships-section {
+                padding: 1.2rem 0.2rem;
+            }
+
+            .membership-card {
+                padding: 1.2rem 0.7rem 1rem 0.7rem;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <div id="nav-include"></div>
     </header>
     <script>
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-include').innerHTML = data;
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileNav = document.querySelector('.mobile-nav');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
-        if (mobileMenuToggle && mobileNav) {
-          mobileMenuToggle.addEventListener('click', (e) => {
-              e.stopPropagation();
-              mobileMenuToggle.classList.toggle('active');
-              mobileNav.classList.toggle('active');
-              if (mobileNav.classList.contains('active')) {
-                  document.body.style.overflow = 'hidden';
-              } else {
-                  document.body.style.overflow = '';
-              }
-          });
-          mobileNavLinks.forEach(link => {
-              link.addEventListener('click', () => {
-                  mobileMenuToggle.classList.remove('active');
-                  mobileNav.classList.remove('active');
-                  document.body.style.overflow = '';
-              });
-          });
-          document.addEventListener('click', (e) => {
-              if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
-                  mobileMenuToggle.classList.remove('active');
-                  mobileNav.classList.remove('active');
-                  document.body.style.overflow = '';
-              }
-          });
-        }
-      });
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-include').innerHTML = data;
+                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+                const mobileNav = document.querySelector('.mobile-nav');
+                const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+                if (mobileMenuToggle && mobileNav) {
+                    mobileMenuToggle.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        mobileMenuToggle.classList.toggle('active');
+                        mobileNav.classList.toggle('active');
+                        if (mobileNav.classList.contains('active')) {
+                            document.body.style.overflow = 'hidden';
+                        } else {
+                            document.body.style.overflow = '';
+                        }
+                    });
+                    mobileNavLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            mobileMenuToggle.classList.remove('active');
+                            mobileNav.classList.remove('active');
+                            document.body.style.overflow = '';
+                        });
+                    });
+                    document.addEventListener('click', (e) => {
+                        if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+                            mobileMenuToggle.classList.remove('active');
+                            mobileNav.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                }
+            });
     </script>
     <main>
         <section class="memberships-hero">
             <h1 class="memberships-title">Become a Member</h1>
             <h3 class="section-tagline">Flexible, high-touch support across beauty, wellness, and business.</h3>
-            <p class="section-subheader">Choose the membership that aligns with your current season of growth — whether you're refining your look, reclaiming your body, or elevating your brand.</p>
+            <p class="section-subheader">Choose the membership that aligns with your current season of growth — whether
+                you're refining your look, reclaiming your body, or elevating your brand.</p>
+            <div class="memberships-hero-image" style="margin: 2rem auto 1.5rem auto; text-align: center;">
+                <img src="css/assets/images/memberships/Sol_redlip3.jpg" alt="Sodada Memberships"
+                    style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+            </div>
         </section>
 
         <section class="memberships-section">
             <h2>💇‍♀️ Hair Membership</h2>
-            <p>Luxury monthly memberships designed for those committed to routine care and radiant confidence. Includes seasonal rituals, 10% off all retail products, and VIP booking priority.</p>
+            <p>Luxury monthly memberships designed for those committed to routine care and radiant confidence. Includes
+                seasonal rituals, 10% off all retail products, and VIP booking priority.</p>
+            <div class="memberships-section-image" style="margin: 2rem auto 1.5rem auto; text-align: center;">
+                <img src="css/assets/images/memberships/Hair_in.jpg" alt="Sodada Hair Membership"
+                    style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+            </div>
             <div class="membership-card">
                 <h3>Sodada Cut Club <span class="price">$88/mo</span></h3>
                 <p>Keep your shape fresh and your strands healthy with monthly haircuts and add-on rituals.</p>
@@ -228,10 +259,16 @@
 
         <section class="memberships-section">
             <h2>🧘 Yoga Membership</h2>
-            <p>A reset for your body, mind, and breath — personalized through trauma-informed movement, energetic alignment, and nervous system care.</p>
+            <p>A reset for your body, mind, and breath — personalized through trauma-informed movement, energetic
+                alignment, and nervous system care.</p>
             <div class="membership-card">
+                <div class="memberships-section-image" style="margin: 2rem auto 1.5rem auto; text-align: center;">
+                    <img src="css/assets/images/memberships/hands4.jpg" alt="Sodada Yoga Membership"
+                        style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+                </div>
                 <h3>Private Yoga Series <span class="price">$1,111</span></h3>
-                <p>A 10-session journey to reconnect with your strength, softness, and center. Ideal for stress relief, mobility, or deep healing.</p>
+                <p>A 10-session journey to reconnect with your strength, softness, and center. Ideal for stress relief,
+                    mobility, or deep healing.</p>
                 <strong>Includes:</strong>
                 <ul>
                     <li>10 Private 1:1 Yoga Sessions (tailored to your needs)</li>
@@ -245,8 +282,12 @@
 
         <section class="memberships-section">
             <h2>💼 Business + Lifestyle Coaching Membership</h2>
-            <p>For the bold and multi-passionate entrepreneur. These coaching tiers are designed to guide your strategy, sharpen your focus, and help you grow with alignment.</p>
+            <p>For the bold and multi-passionate entrepreneur. These coaching tiers are designed to guide your strategy,
+                sharpen your focus, and help you grow with alignment.</p>
             <div class="membership-card">
+                <div class="memberships-section-image" style="margin: 2rem auto 1.5rem auto; text-align: center;">
+                    <img src="css/assets/images/memberships/Sol_redlip2.jpg" alt="Sodada Business Membership" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+                </div>
                 <h3>Sodada Strategy Starter <span class="price">$59/month</span></h3>
                 <p>A group-based membership for entrepreneurs craving structure, community, and momentum.</p>
                 <strong>Includes:</strong>
@@ -256,30 +297,41 @@
                     <li>Growth Assignments, Mindset Prompts, and Celebration Rituals</li>
                     <li>Digital Templates + AI Business Tools</li>
                 </ul>
-                <a href="#" class="cta-btn primary">Book Group Coaching</a>
-                <a href="#" class="cta-btn secondary">Book a Discovery Call</a>
+                <a href="https://www.fresha.com/book-now/sodada-ftq5k815/paid-plans?id=3011417&share&pId=376813"
+                    class="cta-btn primary" target="_blank">Book Group Coaching</a>
+                <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10349758&share&pId=376813"
+                    class="cta-btn secondary" target="_blank">Book a Discovery Call</a>
             </div>
             <div class="membership-card">
-                <h3>Sodada Strategy VIP <span class="price">$222/month <span style='color:#43a047;'>(Founding Rate)</span></span></h3>
-                <p>A high-touch coaching container for solopreneurs, creatives, and service providers scaling with intention.</p>
+                <h3>Sodada Strategy VIP <span class="price">$222/month <span style='color:#43a047;'>(Founding
+                            Rate)</span></span></h3>
+                <p>A high-touch coaching container for solopreneurs, creatives, and service providers scaling with
+                    intention.</p>
                 <strong>Includes Everything in Starter, plus:</strong>
                 <ul>
                     <li>One Monthly Private 1:1 Strategy Session</li>
                     <li>Priority Text + Voice Coaching Support (WhatsApp)</li>
                     <li>Custom Worksheets + Strategy Tools</li>
                 </ul>
-                <div style="color:#888; font-size:0.98rem; margin-bottom:0.5rem;">Full Rate: $333/month starting in 2026</div>
-                <a href="#" class="cta-btn primary">Book VIP Membership</a>
-                <a href="#" class="cta-btn secondary">Book a Discovery Call</a>
+                <div style="color:#888; font-size:0.98rem; margin-bottom:0.5rem;">Full Rate: $333/month starting in 2026
+                </div>
+                <a href="https://www.fresha.com/book-now/sodada-ftq5k815/paid-plans?id=3130958&share&pId=376813"
+                    class="cta-btn primary" target="_blank">Book VIP Membership</a>
+                <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10349758&share&pId=376813"
+                    class="cta-btn secondary" target="_blank">Book a Discovery Call</a>
             </div>
         </section>
 
         <section class="memberships-section">
             <h2>✨ Sodada Radiance Membership</h2>
-            <p>3-Month Signature Transformation — <strong>$2,222</strong></p>
+            <p style="text-align:center; font-size:1.15rem; font-weight:600; margin-bottom:1.5rem;">3-Month Signature Transformation — <strong>$2,222</strong></p>
+            <div class="memberships-section-image" style="margin: 0 auto 2rem auto; text-align: center;">
+                <img src="css/assets/images/memberships/Sol_paints3.jpg" alt="Sodada Radiance Membership" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+            </div>
             <div class="membership-card">
                 <h3>Signature Transformation</h3>
-                <p>A complete reset for your appearance, mindset, and energy. This all-inclusive membership blends beauty, wellness, and personal coaching for full-body radiance and soul-level clarity.</p>
+                <p>A complete reset for your appearance, mindset, and energy. This all-inclusive membership blends
+                    beauty, wellness, and personal coaching for full-body radiance and soul-level clarity.</p>
                 <strong>Includes:</strong>
                 <ul>
                     <li>4 Custom Beauty Services (cut, color, detox, ritual – $777+ value)</li>
@@ -288,27 +340,37 @@
                     <li>Priority Weekday Voice/Text Coaching (24-hour response)</li>
                     <li>Downloadable Transformation Guide (rituals, journaling, self-inquiry)</li>
                 </ul>
-                <div style="color:#888; font-size:0.98rem; margin-bottom:0.5rem;">Investment: $2,222 total or 3 payments of $777 (Founding Rate for first 3 members)<br>Full Rate: $4,444 for future enrollments<br>Only 3 spots available per quarter</div>
-                <a href="#" class="cta-btn primary">Book Radiance Membership</a>
-                <a href="#" class="cta-btn secondary">Book a Consultation</a>
+                <div style="color:#888; font-size:0.98rem; margin-bottom:0.5rem;">Investment: $2,222 total or 3 payments
+                    of $777 (Founding Rate for first 3 members)<br>Full Rate: $4,444 for future enrollments<br>Only 3
+                    spots available per quarter</div>
+                <a href="https://www.fresha.com/book-now/sodada-ftq5k815/paid-plans?id=3011417&share&pId=376813"
+                    class="cta-btn primary" target="_blank">Book Radiance Membership</a>
+                <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10349758&share&pId=376813"
+                    class="cta-btn secondary" target="_blank">Book a Discovery Call</a>
             </div>
         </section>
 
         <section class="memberships-section" style="text-align:center;">
             <h2 style="margin-bottom:1rem;">Which Membership Aligns With You?</h2>
-            <p>From intentional beauty to spiritual clarity and business strategy, Sodada memberships are designed to guide you home — to your power, your glow, and your aligned path.</p>
-            <a href="#" class="cta-btn secondary">Explore All Services</a>
-            <a href="#" class="cta-btn primary">Apply for Membership</a>
-            <a href="#" class="cta-btn secondary">Contact Solange</a>
+            <p>From intentional beauty to spiritual clarity and business strategy, Sodada memberships are designed to
+                guide you home — to your power, your glow, and your aligned path.</p>
+            <a href="https://www.fresha.com/book-now/sodada-ftq5k815/all-offer?id=403817&share&pId=376813"
+                class="cta-btn secondary" target="_blank">Explore All Services</a>
+            <a href="https://www.fresha.com/book-now/sodada-ftq5k815/paid-plans?share&pId=376813"
+                class="cta-btn primary" target="_blank">Book A Membership</a>
+            <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?lid=403817&eid=1182513&oiid=sv%3A10349758&share&pId=376813"
+                class="cta-btn secondary" target="_blank">Contact Solange</a>
         </section>
     </main>
     <div class="footer-image" style="text-align:center; margin: 2rem 0;">
-        <img src="css/assets/images/image3.jpg" alt="Sodada Mood" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+        <img src="css/assets/images/image3.jpg" alt="Sodada Mood"
+            style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
     </div>
     <footer>
         <div class="footer-newsletter">
             <h3>✨ Join the Movement. Elevate Everything.</h3>
-            <p>Get curated rituals, mindset shifts, and early access to exclusive Sodada experiences — where beauty, wellness, and aligned living meet.</p>
+            <p>Get curated rituals, mindset shifts, and early access to exclusive Sodada experiences — where beauty,
+                wellness, and aligned living meet.</p>
             <a href="#" class="cta-btn primary">I'm In</a>
         </div>
         <div class="footer-sitemap">
@@ -339,4 +401,5 @@
         </div>
     </footer>
 </body>
+
 </html>
