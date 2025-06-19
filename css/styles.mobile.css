@@ -63,15 +63,17 @@
     }
     .instagram-feed {
         padding: 2.5rem 0.5rem 2rem;
-    }
-    .footer-newsletter, .footer-sitemap {
+    }    .footer-newsletter, .footer-sitemap {
         padding: 1.5rem 0.5rem;
     }
     .footer-newsletter h3 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     .footer-newsletter p {
         font-size: 0.95rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .footer-newsletter .cta-btn,
     .featured-preview .cta-btn,
@@ -89,11 +91,10 @@
     .testimonials-cta,
     .instagram-embed {
         text-align: center;
-    }
-    .footer-menu {
+    }    .footer-menu {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem 1.2rem;
+        gap: 0.8rem 1rem;
         justify-content: center;
         padding-left: 0;
         font-size: 0.95rem;
@@ -102,7 +103,10 @@
         display: inline-block;
     }
     footer {
-        padding: 2rem 0.5rem 1.2rem;
+        padding: 3rem 0.5rem 1.5rem;
         font-size: 0.9rem;
+    }
+    .footer-sitemap {
+        padding-top: 2rem;
     }
 }

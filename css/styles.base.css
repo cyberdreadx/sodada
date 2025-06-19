@@ -1,11 +1,11 @@
-/* SODADA Color Palette */
+/* SODADA Color Palette - Rich Emerald Strategy */
 :root {
-    --sodada-green: #21715b;
-    --sodada-blush: #e7b8b0;
-    --sodada-dark: #232b2e;
-    --sodada-light-blush: #f3d3cc;
-    --sodada-aqua: #8ec6cb;
-    --sodada-cream: #f6f1e7;
+    --sodada-emerald: #064E3B;  /* Rich Emerald */
+    --sodada-larimar: #A8DADC;  /* Larimar Blue */
+    --sodada-obsidian: #1B1B1B; /* Obsidian */
+    --sodada-blush: #E8B8C8;    /* Blush Pink */
+    --sodada-cream: #F7F4ED;    /* Creme */
+    --sodada-dark: #232b2e;     /* Legacy dark color preserved */
 }
 
 /* Base styles: reset, typography, colors */
@@ -23,7 +23,7 @@ html, body {
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: var(--sodada-dark);
+    color: var(--sodada-obsidian);
     background-color: var(--sodada-cream);
 }
 
@@ -40,28 +40,28 @@ body {
     text-align: center;
     font-size: 0.9rem;
     background: var(--sodada-blush);
-    color: var(--sodada-dark);
+    color: var(--sodada-obsidian);
 }
 
 .cta-btn.primary {
     background: var(--sodada-blush);
-    color: var(--sodada-dark);
+    color: var(--sodada-obsidian);
 }
 
 .cta-btn.primary:hover {
-    background: var(--sodada-green);
+    background: var(--sodada-emerald);
     color: #fff;
     transform: translateY(-2px);
 }
 
 .cta-btn.secondary {
     background: transparent;
-    color: var(--sodada-green);
-    border: 2px solid var(--sodada-green);
+    color: var(--sodada-emerald);
+    border: 2px solid var(--sodada-emerald);
 }
 
 .cta-btn.secondary:hover {
-    background: var(--sodada-green);
+    background: var(--sodada-emerald);
     color: #fff;
 }
 
@@ -73,7 +73,7 @@ body {
 .section-header h2 {
     font-size: 2.2rem;
     font-weight: 300;
-    color: var(--sodada-dark);
+    color: var(--sodada-obsidian);
     margin-bottom: 1rem;
     letter-spacing: 2px;
 }
@@ -81,13 +81,13 @@ body {
 .section-header h3 {
     font-size: 1.8rem;
     font-weight: 400;
-    color: var(--sodada-green);
+    color: var(--sodada-emerald);
     margin-bottom: 1rem;
 }
 
 .section-subtitle {
     font-size: 1.1rem;
-    color: var(--sodada-green);
+    color: var(--sodada-emerald);
     font-style: italic;
     max-width: 600px;
     margin: 0 auto;

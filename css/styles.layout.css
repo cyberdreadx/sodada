@@ -32,7 +32,7 @@ nav {
 }
 
 .nav-links a {
-    color: #333;
+    color: #1B1B1B; /* Obsidian */
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 400;
@@ -41,7 +41,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #d4a5a5;
+    color: #064E3B; /* Rich Emerald */
 }
 
 main {
@@ -49,26 +49,69 @@ main {
 }
 
 footer {
-    background: #f8f4f4;
-    color: #666;
+    background: #1B1B1B; /* Obsidian for footer background */
+    color: #F7F4ED; /* Creme for footer text */
     text-align: center;
-    padding: 3rem 2rem;
-    font-size: 0.9rem;
+    padding: 4rem 2rem 3rem;
+    font-size: 1rem;
+    margin-top: 3rem;
+    border-top: 4px solid #064E3B; /* Rich Emerald border for more visibility */
 }
 
 .footer-newsletter, .footer-sitemap {
-    padding: 1.5rem 0.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0.5rem;
+}
+
+.footer-newsletter h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: #E8B8C8; /* Blush Pink for attention */
+    font-weight: 600;
+}
+
+.footer-newsletter p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-sitemap {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 1rem;
+    padding-top: 2.5rem;
 }
 
 .footer-menu {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 1.2rem;
+    gap: 0.8rem 1.5rem;
     justify-content: center;
     padding-left: 0;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 
 .footer-menu li {
     display: inline-block;
+}
+
+.footer-menu a {
+    color: #A8DADC; /* Larimar Blue */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-menu a:hover {
+    color: #E8B8C8; /* Blush Pink */
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    margin-top: 2.5rem;
+    opacity: 0.7;
+    font-size: 0.9rem;
 }

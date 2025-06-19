@@ -1,6 +1,6 @@
 /* Section-specific styles: hero, featured, testimonials, as-seen-in, instagram */
 .hero {
-    background: linear-gradient(135deg, #f8f4f4 0%, #f0eeee 100%);
+    background: linear-gradient(135deg, #F7F4ED 0%, #F7F4ED 100%); /* Creme background */
     padding: 8rem 2rem 6rem;
     min-height: 80vh;
 }
@@ -26,7 +26,7 @@
 .hero-text h1 {
     font-size: 2.8rem;
     font-weight: 300;
-    color: #333;
+    color: #1B1B1B; /* Obsidian */
     margin-bottom: 1rem;
     letter-spacing: 2px;
     line-height: 1.2;
@@ -35,7 +35,7 @@
 .hero-subtitle {
     font-size: 1.3rem;
     font-weight: 300;
-    color: #d4a5a5;
+    color: #064E3B; /* Rich Emerald */
     margin-bottom: 1.5rem;
     font-style: italic;
 }
@@ -88,7 +88,7 @@
 
 .testimonials {
     padding: 6rem 2rem;
-    background: #f8f4f4;
+    background: #A8DADC; /* Larimar Blue */
 }
 
 .testimonials-cta {
@@ -148,12 +148,24 @@
 /* Footer Newsletter CTA */
 .footer-newsletter {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .footer-newsletter .cta-btn {
     display: inline-block;
     margin: 1.5rem auto 0 auto;
+    background: #E8B8C8; /* Blush Pink */
+    color: #1B1B1B; /* Obsidian */
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 50px;
+}
+
+.footer-newsletter .cta-btn:hover {
+    background: #A8DADC; /* Larimar Blue */
+    transform: translateY(-3px);
 }
 
 .instagram-embed .cta-btn {
