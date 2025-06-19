@@ -1,11 +1,11 @@
-/* SODADA Color Palette - Rich Emerald Strategy */
+/* SODADA Color Palette - Dark & Navy */
 :root {
-    --sodada-emerald: #064E3B;  /* Rich Emerald */
-    --sodada-larimar: #A8DADC;  /* Larimar Blue */
-    --sodada-obsidian: #1B1B1B; /* Obsidian */
-    --sodada-blush: #E8B8C8;    /* Blush Pink */
-    --sodada-cream: #F7F4ED;    /* Creme */
-    --sodada-dark: #232b2e;     /* Legacy dark color preserved */
+    --sodada-charcoal: #222222; /* Dark Charcoal/Black from image */
+    --sodada-navy: #1a3040;     /* Deep Navy Blue from image */
+    --sodada-navy-light: #2a4050; /* Lighter version of Navy */
+    --sodada-obsidian: #1B1B1B; /* Obsidian - for dark elements */
+    --sodada-cream: #F7F4ED;    /* Creme - light neutral */
+    --sodada-dark: #232b2e;     /* Dark neutral */
 }
 
 /* Base styles: reset, typography, colors */
@@ -39,29 +39,29 @@ body {
     display: inline-block;
     text-align: center;
     font-size: 0.9rem;
-    background: var(--sodada-blush);
-    color: var(--sodada-obsidian);
+    background: var(--sodada-navy);
+    color: #fff;
 }
 
 .cta-btn.primary {
-    background: var(--sodada-blush);
-    color: var(--sodada-obsidian);
+    background: var(--sodada-navy);
+    color: #fff;
 }
 
 .cta-btn.primary:hover {
-    background: var(--sodada-emerald);
+    background: var(--sodada-navy);
     color: #fff;
     transform: translateY(-2px);
 }
 
 .cta-btn.secondary {
     background: transparent;
-    color: var(--sodada-emerald);
-    border: 2px solid var(--sodada-emerald);
+    color: var(--sodada-navy);
+    border: 2px solid var(--sodada-navy);
 }
 
 .cta-btn.secondary:hover {
-    background: var(--sodada-emerald);
+    background: var(--sodada-navy);
     color: #fff;
 }
 
@@ -81,13 +81,13 @@ body {
 .section-header h3 {
     font-size: 1.8rem;
     font-weight: 400;
-    color: var(--sodada-emerald);
+    color: var(--sodada-navy);
     margin-bottom: 1rem;
 }
 
 .section-subtitle {
     font-size: 1.1rem;
-    color: var(--sodada-emerald);
+    color: var(--sodada-navy);
     font-style: italic;
     max-width: 600px;
     margin: 0 auto;

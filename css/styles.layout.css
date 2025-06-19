@@ -41,7 +41,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #064E3B; /* Rich Emerald */
+    color: #1a3040; /* Navy Blue */
 }
 
 main {
@@ -49,13 +49,13 @@ main {
 }
 
 footer {
-    background: #1B1B1B; /* Obsidian for footer background */
+    background: #222222; /* Charcoal for footer background */
     color: #F7F4ED; /* Creme for footer text */
     text-align: center;
     padding: 4rem 2rem 3rem;
     font-size: 1rem;
     margin-top: 3rem;
-    border-top: 4px solid #064E3B; /* Rich Emerald border for more visibility */
+    border-top: 4px solid #1a3040; /* Navy Blue border for more visibility */
 }
 
 .footer-newsletter, .footer-sitemap {
@@ -67,7 +67,7 @@ footer {
 .footer-newsletter h3 {
     font-size: 1.7rem;
     margin-bottom: 1rem;
-    color: #E8B8C8; /* Blush Pink for attention */
+    color: #F7F4ED; /* Creme for attention */
     font-weight: 600;
 }
 
@@ -100,13 +100,13 @@ footer {
 }
 
 .footer-menu a {
-    color: #A8DADC; /* Larimar Blue */
+    color: #f7f4ed; /* Creme for better readability */
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .footer-menu a:hover {
-    color: #E8B8C8; /* Blush Pink */
+    color: white; /* Bright white for better contrast on hover */
     text-decoration: underline;
 }
 
