@@ -10,13 +10,12 @@
     <link rel="stylesheet" href="css/styles.menu.css">
     <link rel="stylesheet" href="css/styles.mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-    /* General Styling */
+    <style>    /* General Styling */
     body {
         font-family: 'Poppins', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f9f9f9;
+        background-color: var(--sodada-cream);
     }
 
     /* Hero Section */
@@ -27,7 +26,7 @@
         text-align: center;
         padding: 2rem;
         background-color: #fff;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 24px rgba(26, 48, 64, 0.08);
         border-radius: 12px;
         margin: 10.5rem auto 2rem auto;
         max-width: 1200px;
@@ -38,18 +37,16 @@
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
-    }
-
-    .hero-text h1 {
+    }    .hero-text h1 {
         font-size: 2.5rem;
         font-weight: 600;
-        color: #333;
+        color: var(--sodada-charcoal);
     }
 
     .hero-text h2 {
         font-size: 1.5rem;
         font-weight: 400;
-        color: #666;
+        color: var(--sodada-navy);
         max-width: 800px;
     }
 
@@ -57,14 +54,12 @@
         max-width: 100%;
         height: auto;
         border-radius: 14px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-    }
-
-    /* Service Sections */
+        box-shadow: 0 4px 24px rgba(26, 48, 64, 0.1);
+    }    /* Service Sections */
     .services {
         padding: 2rem;
         background-color: #fff;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 24px rgba(26, 48, 64, 0.08);
         border-radius: 12px;
         margin: 2rem auto;
         max-width: 1200px;
@@ -73,7 +68,7 @@
     .section-header h2 {
         font-size: 2rem;
         font-weight: 500;
-        color: #333;
+        color: var(--sodada-charcoal);
         text-align: center;
         margin-bottom: 1rem;
     }
@@ -93,25 +88,22 @@
         background-color: #f9f9f9;
         padding: 1rem;
         border-radius: 8px;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .service-list a {
-        color: #007BFF;
+        box-shadow: 0 4px 24px rgba(26, 48, 64, 0.05);
+    }    .service-list a {
+        color: var(--sodada-navy);
         text-decoration: none;
         font-weight: 500;
     }
 
     .service-list a:hover {
         text-decoration: underline;
-    }
-
-    /* Footer Styling */
+        color: var(--sodada-navy-light);
+    }    /* Footer Styling */
     .footer {
         text-align: center;
         padding: 2rem;
-        background-color: #333;
-        color: #fff;
+        background-color: var(--sodada-charcoal);
+        color: var(--sodada-cream);
     }
 
     .footer-newsletter h3 {
@@ -121,7 +113,7 @@
 
     .footer-newsletter p {
         font-size: 1rem;
-        color: #ccc;
+        color: var(--sodada-cream);
     }
 
     .footer-menu {
@@ -133,14 +125,14 @@
         justify-content: center;
         gap: 1rem;
     }    .footer-menu a {
-        color: #A8DADC; /* Larimar Blue */
+        color: var(--sodada-cream); 
         text-decoration: none;
         font-weight: 500;
     }
 
     .footer-menu a:hover {
         text-decoration: underline;
-        color: #E8B8C8; /* Blush Pink */
+        color: #fff;
     }
 
     /* Responsive Design */
