@@ -85,10 +85,47 @@
         <div id="nav-include"></div>
     </header>
     <script>
+        // HTML include for nav.html and mobile menu toggle functionality
         fetch('nav.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('nav-include').innerHTML = data;
+
+                // Mobile menu toggle functionality (robust version)
+                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+                const mobileNav = document.querySelector('.mobile-nav');
+                const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+                if (mobileMenuToggle && mobileNav) {
+                  mobileMenuToggle.addEventListener('click', (e) => {
+                      e.stopPropagation();
+                      mobileMenuToggle.classList.toggle('active');
+                      mobileNav.classList.toggle('active');
+                      if (mobileNav.classList.contains('active')) {
+                          document.body.style.overflow = 'hidden';
+                      } else {
+                          document.body.style.overflow = '';
+                      }
+                  });
+
+                  // Close mobile menu when a link is clicked
+                  mobileNavLinks.forEach(link => {
+                      link.addEventListener('click', () => {
+                          mobileMenuToggle.classList.remove('active');
+                          mobileNav.classList.remove('active');
+                          document.body.style.overflow = '';
+                      });
+                  });
+
+                  // Close mobile menu when clicking outside
+                  document.addEventListener('click', (e) => {
+                      if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+                          mobileMenuToggle.classList.remove('active');
+                          mobileNav.classList.remove('active');
+                          document.body.style.overflow = '';
+                      }
+                  });
+                }
             });
     </script>
     <main>

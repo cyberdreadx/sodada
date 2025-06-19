@@ -177,7 +177,7 @@
         <div id="nav-include"></div>
     </header>
     <script>
-    // Simple HTML include for nav.html
+    // HTML include for nav.html and mobile menu toggle functionality
     fetch('nav.html')
       .then(response => response.text())
       .then(data => {
@@ -196,6 +196,7 @@
                   document.body.style.overflow = '';
               }
           });
+          // Close mobile menu when a link is clicked
           mobileNavLinks.forEach(link => {
               link.addEventListener('click', () => {
                   mobileMenuToggle.classList.remove('active');
@@ -203,6 +204,7 @@
                   document.body.style.overflow = '';
               });
           });
+          // Close mobile menu when clicking outside
           document.addEventListener('click', (e) => {
               if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
                   mobileMenuToggle.classList.remove('active');

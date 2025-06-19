@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | SODADA Holistic Beauty & Wellness</title>
+    <link rel="stylesheet" href="css/styles.base.css">
+    <link rel="stylesheet" href="css/styles.layout.css">
+    <link rel="stylesheet" href="css/styles.sections.css">
+    <link rel="stylesheet" href="css/styles.menu.css">
+    <link rel="stylesheet" href="css/styles.mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .contact-hero {
+            text-align: center;
+            margin: 10rem 0 2.5rem 0;
+        }
+        .contact-title {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: #3a3aee;
+            letter-spacing: 0.01em;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 10rem;
+            margin-bottom: 0.7rem;
+        }
+        .contact-section {
+            background: none;
+            margin: 2.5rem auto 2rem auto;
+            max-width: 700px;
+            padding: 0 1.5rem 2rem 1.5rem;
+            font-size: 1.13rem;
+            color: #333;
+        }
+        .contact-block {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(80, 60, 120, 0.09);
+            padding: 2.1rem 1.5rem 1.5rem 1.5rem;
+            margin-bottom: 2rem;
+            border: 1.5px solid #f3f0ff;
+        }
+        .contact-block h2 {
+            color: #7c4dff;
+            font-size: 1.3rem;
+            margin-bottom: 0.7rem;
+        }
+        .contact-links {
+            margin: 1.5rem 0 1.5rem 0;
+            text-align: left;
+        }
+        .contact-links a, .contact-links .email-link {
+            display: inline-block;
+            margin: 0.4rem 1rem 0.4rem 0;
+            padding: 0.7rem 1.3rem;
+            border-radius: 8px;
+            background: #3a3aee;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: background 0.18s;
+        }
+        .contact-links a.secondary {
+            background: #7c4dff;
+        }
+        .contact-links a:hover, .contact-links .email-link:hover {
+            background: #7c4dff;
+        }
+        .contact-info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.2rem 0;
+        }
+        .contact-info-list li {
+            margin-bottom: 0.7rem;
+            font-size: 1.08rem;
+        }
+        .contact-icons {
+            font-size: 1.3rem;
+            margin-right: 0.7rem;
+        }
+        @media (max-width: 600px) {
+            .contact-hero {
+                margin-top: 6.5rem;
+            }
+            .contact-title {
+                font-size: 1.3rem;
+            }
+            .contact-section {
+                padding: 1.2rem 0.2rem;
+                font-size: 0.98rem;
+            }
+            .contact-block {
+                padding: 1.1rem 0.5rem 1.1rem 0.5rem;
+                border-radius: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="nav-include"></div>
+    </header>
+    <script>
+        // HTML include for nav.html and mobile menu toggle functionality
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-include').innerHTML = data;
+
+                // Mobile menu toggle functionality (copied from index.html)
+                const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+                const mobileNav = document.querySelector('.mobile-nav');
+                const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+                if (mobileMenuToggle && mobileNav) {
+                  mobileMenuToggle.addEventListener('click', (e) => {
+                      e.stopPropagation();
+                      mobileMenuToggle.classList.toggle('active');
+                      mobileNav.classList.toggle('active');
+                      if (mobileNav.classList.contains('active')) {
+                          document.body.style.overflow = 'hidden';
+                      } else {
+                          document.body.style.overflow = '';
+                      }
+                  });
+
+                  // Close mobile menu when a link is clicked
+                  mobileNavLinks.forEach(link => {
+                      link.addEventListener('click', () => {
+                          mobileMenuToggle.classList.remove('active');
+                          mobileNav.classList.remove('active');
+                          document.body.style.overflow = '';
+                      });
+                  });
+
+                  // Close mobile menu when clicking outside
+                  document.addEventListener('click', (e) => {
+                      if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+                          mobileMenuToggle.classList.remove('active');
+                          mobileNav.classList.remove('active');
+                          document.body.style.overflow = '';
+                      }
+                  });
+                }
+            });
+    </script>
+    <main>
+        <section class="contact-hero">
+            <h1 class="contact-title">📬 Contact Sodada</h1>
+            <div style="margin: 2rem auto 1.5rem auto; text-align: center;">
+                <img src="css/assets/images/hands.png" alt="Contact Sodada" style="max-width: 340px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+            </div>
+            <p style="max-width: 500px; margin: 0 auto; font-size: 1.13rem; color: #444;">Let’s connect. Whether you're ready to book or have questions about services, memberships, or collaborations — I’m here.</p>
+        </section>
+        <section class="contact-section">
+            <div class="contact-block">
+                <h2>✨ Booking & Inquiries</h2>
+                <ul class="contact-info-list">
+                    <li><span class="contact-icons">📅</span><strong>Book Online</strong><br>
+                        Reserve your next hair, yoga, or coaching session directly via Fresha.</li>
+                </ul>
+                <div class="contact-links">
+                    <a href="https://www.fresha.com/a/sodada-miami-usa-1234-studio-address-xyz" target="_blank">Book a Session →</a>
+                </div>
+                <ul class="contact-info-list">
+                    <li><span class="contact-icons">📨</span><strong>General Inquiries</strong><br>
+                        For questions about memberships, events, collaborations, or concierge requests:</li>
+                </ul>
+                <div class="contact-links">
+                    <a href="mailto:hello@sodada.salon" class="email-link">hello@sodada.salon</a>
+                </div>
+                <ul class="contact-info-list">
+                    <li><span class="contact-icons">📍</span><strong>Location</strong><br>
+                        Sodada serves private and pop-up clients across Miami & Fort Lauderdale.<br>
+                        Select concierge services and studio locations provided upon booking.</li>
+                </ul>
+            </div>
+            <div class="contact-block">
+                <h2>🌐 Connect Online</h2>
+                <ul class="contact-info-list">
+                    <li>Instagram: <a href="https://instagram.com/sodadahair" target="_blank">@sodadahair</a></li>
+                    <li>Instagram: <a href="https://instagram.com/solangelbaby" target="_blank">@solangelbaby</a></li>
+                    <li>Newsletter: <a href="#" target="_blank">Join here →</a></li>
+                </ul>
+            </div>
+            <div class="contact-block">
+                <h2>🤍 Let’s Make Magic</h2>
+                <p>Have a vision for a creative shoot, retreat, or activation?</p>
+                <div class="contact-links">
+                    <a href="mailto:hello@sodada.salon?subject=Custom%20Inquiry" class="secondary">Send a Custom Inquiry →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-newsletter">
+            <h3>✨ Join the Movement. Elevate Everything.</h3>
+            <p>Get curated rituals, mindset shifts, and early access to exclusive Sodada experiences — where beauty, wellness, and aligned living meet.</p>
+            <a href="#" class="cta-btn primary">I'm In</a>
+        </div>
+        <div class="footer-sitemap">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beauty.html">Beauty</a></li>
+                <li><a href="hair.html">Hair</a></li>
+                <li><a href="wellness.html">Wellness</a></li>
+                <li><a href="yoga.html">Yoga</a></li>
+                <li><a href="coaching.html">Coaching</a></li>
+                <li><a href="memberships.html">Memberships</a></li>
+                <li><a href="signature-membership.html">Signature Membership</a></li>
+                <li><a href="academy.html">Academy</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="terms.html">Terms & Policies</a></li>
+                <li><a href="newsletter.html">Newsletter Sign-Up</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="social.html">Social Links</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 SODADA Holistic Beauty & Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
