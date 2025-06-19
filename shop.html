@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sodada Shop | SODADA Holistic Beauty & Wellness</title>
+    <link rel="stylesheet" href="css/styles.base.css">
+    <link rel="stylesheet" href="css/styles.layout.css">
+    <link rel="stylesheet" href="css/styles.sections.css">
+    <link rel="stylesheet" href="css/styles.menu.css">
+    <link rel="stylesheet" href="css/styles.mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .shop-hero {
+            text-align: center;
+            margin: 10.5rem 0 2.5rem 0;
+        }
+        .shop-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3a3aee;
+            letter-spacing: 0.01em;
+            font-family: 'Poppins', sans-serif;
+        }
+        .shop-section {
+            background: linear-gradient(120deg, #f9f9f9 80%, #f3f0ff 100%);
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(80, 60, 120, 0.08);
+            margin: 2.5rem auto 2rem auto;
+            max-width: 900px;
+            padding: 2.5rem 1.5rem 2rem 1.5rem;
+            font-size: 1.13rem;
+            color: #333;
+        }
+        .shop-section h2 {
+            color: #3a3aee;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .shop-section ul {
+            margin-left: 1.2rem;
+        }
+        .shop-product {
+            margin-bottom: 2.2rem;
+        }
+        .shop-product-title {
+            font-size: 1.18rem;
+            font-weight: 600;
+            color: #7c4dff;
+            margin-bottom: 0.2rem;
+        }
+        .shop-product-desc {
+            margin-bottom: 0.5rem;
+        }
+        .shop-link {
+            display: inline-block;
+            margin: 0.3rem 0 0.7rem 0;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            background: #7c4dff;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: background 0.18s;
+        }
+        .shop-link:hover {
+            background: #3a3aee;
+        }
+        .shop-coming-soon {
+            background: #f3f0ff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2.5rem 0 1.5rem 0;
+            text-align: center;
+            color: #7c4dff;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+        .shop-cta {
+            text-align: center;
+            margin: 2.5rem 0 1.5rem 0;
+        }
+        .shop-cta a {
+            display: inline-block;
+            margin: 0.5rem 1rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            background: #3a3aee;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.08rem;
+            transition: background 0.18s;
+        }
+        .shop-cta a.secondary {
+            background: #7c4dff;
+        }
+        .shop-cta a:hover {
+            background: #7c4dff;
+        }
+        @media (max-width: 600px) {
+            .shop-hero {
+                margin-top: 6.5rem;
+            }
+            .shop-section {
+                padding: 1.2rem 0.5rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="nav-include"></div>
+    </header>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-include').innerHTML = data;
+            });
+    </script>
+    <main>
+        <section class="shop-hero">
+            <h1 class="shop-title">Sodada Shop</h1>
+            <div style="margin: 2rem auto 1.5rem auto; text-align: center;">
+                <img src="css/assets/images/shop.png" alt="Sodada Shop" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+            </div>
+        </section>
+        <section class="shop-section">
+            <h2>Elevate Your Rituals</h2>
+            <p>Curated tools and holistic products designed to support your beauty and wellness between sessions. Everything here has been hand-selected, tested, and used by Solange in her practice — so you can trust you're investing in quality, aligned care.</p>
+            <div class="shop-product">
+                <div class="shop-product-title">✨ Now Available</div>
+                <div class="shop-product-title">Davines Haircare</div>
+                <div class="shop-product-desc">Professional, sustainable haircare made in Parma, Italy. Known for performance and clean ingredients, Davines is the line I use at the backbar and for styling in every Sodada session. Expect nourishment, shine, and beautifully subtle fragrance.</div>
+                <a class="shop-link" href="https://www.fresha.com/store/sodada-meets-solangelbaby-uferxkvh?share&pId=376813&_gl=1*1b4joaj*_gcl_au*MTE0NzU1NDE0MC4xNzQ5MzE2NTA3LjY5MTU4MTI3Ni4xNzQ5MzE2NTI0LjE3NDkzMTY1MjM.*_ga*OTU1NDEzNDQuMTc0OTMxNjUwNw..*_ga_SMQNG7NE8C*czE3NTAyNzQ5OTkkbzE5JGcxJHQxNzUwMjc2NTczJGoyNSRsMCRoMA.." target="_blank">Shop Davines</a>
+            </div>
+            <div class="shop-product">
+                <div class="shop-product-title">Kitsch Beauty Tools</div>
+                <div class="shop-product-desc">Gentle on hair and skin, Kitsch offers eco-conscious styling tools and accessories like satin scrunchies, detangling combs, and heatless curlers that make your daily rituals feel luxe and effortless.</div>
+                <a class="shop-link" href="#" target="_blank">Shop Kitsch Tools (Coming Soon)</a>
+            </div>
+            <div class="shop-product">
+                <div class="shop-product-title">Jolie Shower Filters</div>
+                <div class="shop-product-desc">Your hair deserves better water. Jolie filters remove chlorine, heavy metals, and other impurities that dull shine and dry out skin and hair. I recommend this to every color client to preserve results and improve scalp health.</div>
+                <a class="shop-link" href="#" target="_blank">Shop Jolie Filters (Coming Soon)</a>
+            </div>
+            <div class="shop-product">
+                <div class="shop-product-title">Mulberry Silk Accessories</div>
+                <div class="shop-product-desc">Pure mulberry silk pillowcases and wraps to protect your hair while you sleep and preserve smoothness and hydration. Perfect for extending the life of blowouts, curls, and treatments.</div>
+                <a class="shop-link" href="#" target="_blank">Shop Silk Goods (Coming Soon)</a>
+            </div>
+            <div class="shop-coming-soon">
+                🌀 Coming Soon<br><br>
+                <strong>Holistic Beauty & Wellness Bundles</strong><br>
+                Guided meditations, breathwork audio, and yoga flows designed by Solange to help you restore nervous system balance.<br><br>
+                <strong>Digital Business Tools & Workshop Replays</strong><br>
+                Resources for creative entrepreneurs, including AI content calendars, eBooks, and recorded coaching sessions on burnout recovery, brand clarity, and structure for solopreneurs.<br><br>
+                🕊️ Launching Summer 2025 — Join the newsletter to be the first to know.
+            </div>
+            <div class="shop-cta">
+                <p>Want to be the first to access bundles, replays, and special drops?</p>
+                <a href="#" target="_blank">Join the Newsletter</a>
+                <a href="https://www.fresha.com/book-now/sodada-ftq5k815/all-offer?id=403817&share&pId=376813" class="secondary" target="_blank">Book a Session</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-newsletter">
+            <h3>✨ Join the Movement. Elevate Everything.</h3>
+            <p>Get curated rituals, mindset shifts, and early access to exclusive Sodada experiences — where beauty, wellness, and aligned living meet.</p>
+            <a href="#" class="cta-btn primary">I'm In</a>
+        </div>
+        <div class="footer-sitemap">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beauty.html">Beauty</a></li>
+                <li><a href="hair.html">Hair</a></li>
+                <li><a href="wellness.html">Wellness</a></li>
+                <li><a href="yoga.html">Yoga</a></li>
+                <li><a href="coaching.html">Coaching</a></li>
+                <li><a href="memberships.html">Memberships</a></li>
+                <li><a href="signature-membership.html">Signature Membership</a></li>
+                <li><a href="academy.html">Academy</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="terms.html">Terms & Policies</a></li>
+                <li><a href="newsletter.html">Newsletter Sign-Up</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="social.html">Social Links</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 SODADA Holistic Beauty & Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
