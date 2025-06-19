@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sodada Journal | SODADA Holistic Beauty & Wellness</title>
+    <link rel="stylesheet" href="css/styles.base.css">
+    <link rel="stylesheet" href="css/styles.layout.css">
+    <link rel="stylesheet" href="css/styles.sections.css">
+    <link rel="stylesheet" href="css/styles.menu.css">
+    <link rel="stylesheet" href="css/styles.mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .blog-hero {
+            text-align: center;
+            margin: 10rem 0 2.5rem 0;
+        }
+        .blog-title {
+            font-size: 2.7rem;
+            font-weight: 800;
+            color: #3a3aee;
+            letter-spacing: 0.01em;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 10rem;
+            margin-bottom: 0.5rem;
+        }
+        .blog-section {
+            background: none;
+            margin: 2.5rem auto 2rem auto;
+            max-width: 1000px;
+            padding: 0 1.5rem 2rem 1.5rem;
+            font-size: 1.13rem;
+            color: #333;
+        }
+        .blog-section h2 {
+            color: #3a3aee;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .blog-links {
+            text-align: center;
+            margin: 2rem 0 2.5rem 0;
+        }
+        .blog-links a {
+            display: inline-block;
+            margin: 0.5rem 1rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            background: #7c4dff;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.08rem;
+            transition: background 0.18s;
+            box-shadow: 0 2px 12px rgba(80, 60, 120, 0.07);
+        }
+        .blog-links a.secondary {
+            background: #3a3aee;
+        }
+        .blog-links a:hover {
+            background: #3a3aee;
+        }
+        .blog-posts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.2rem 2.2rem;
+            margin-bottom: 2.5rem;
+        }
+        .blog-post {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(80, 60, 120, 0.09);
+            padding: 2.1rem 1.5rem 1.5rem 1.5rem;
+            margin-bottom: 0;
+            border: 1.5px solid #f3f0ff;
+            transition: box-shadow 0.18s, transform 0.18s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 420px;
+        }
+        .blog-post:hover {
+            box-shadow: 0 8px 32px rgba(80, 60, 120, 0.16);
+            transform: translateY(-4px) scale(1.012);
+        }
+        .blog-post-title {
+            font-size: 1.32rem;
+            font-weight: 700;
+            color: #7c4dff;
+            margin-bottom: 0.7rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        .blog-post-meta {
+            font-size: 0.98rem;
+            color: #888;
+            margin-bottom: 0.7rem;
+            font-style: italic;
+        }
+        .blog-post-cta {
+            margin-top: auto;
+        }
+        .blog-post-cta a {
+            display: inline-block;
+            margin: 0.3rem 0.7rem 0 0;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            background: #3a3aee;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: background 0.18s;
+        }
+        .blog-post-cta a.secondary {
+            background: #7c4dff;
+        }
+        .blog-post-cta a:hover {
+            background: #7c4dff;
+        }
+        @media (max-width: 900px) {
+            .blog-posts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .blog-hero {
+                margin-top: 6.5rem;
+            }
+            .blog-title {
+                font-size: 1.45rem;
+                margin-bottom: 0.7rem;
+            }
+            .blog-section {
+                padding: 1.2rem 0.2rem;
+                font-size: 0.98rem;
+            }
+            .blog-links a {
+                font-size: 0.98rem;
+                padding: 0.7rem 1.1rem;
+            }
+            .blog-posts-grid {
+                gap: 1.2rem 0;
+            }
+            .blog-post {
+                padding: 1.1rem 0.5rem 1.1rem 0.5rem;
+                min-height: unset;
+                font-size: 0.98rem;
+                border-radius: 12px;
+                box-shadow: 0 2px 10px rgba(80, 60, 120, 0.07);
+                margin-bottom: 0.7rem;
+            }
+            .blog-post-title {
+                font-size: 1.08rem;
+                margin-bottom: 0.5rem;
+            }
+            .blog-post-meta {
+                font-size: 0.89rem;
+                margin-bottom: 0.5rem;
+            }
+            .blog-post-cta a {
+                font-size: 0.95rem;
+                padding: 0.5rem 1rem;
+                margin: 0.2rem 0.4rem 0 0;
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="nav-include"></div>
+    </header>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-include').innerHTML = data;
+            });
+    </script>
+    <main>
+        <section class="blog-hero">
+            <h1 class="blog-title">✨ Welcome to the Sodada Journal</h1>
+            <div style="margin: 2rem auto 1.5rem auto; text-align: center;">
+                <img src="css/assets/images/GlamBTS.jpg" alt="Sodada Journal" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+            </div>
+        </section>
+        <section class="blog-section">
+            <p>Notes from the chair, the mat, and the studio.<br>
+            This is where I share insights, inspiration, and behind-the-scenes reflections on holistic living — from energy-based hair rituals to nervous system healing, soulful entrepreneurship, and spiritual alignment.<br>
+            If you're into transformation, intention, and living beautifully from the inside out — you're in the right place.<br>
+            Sign up for the newsletter to get first access to new blog posts, private events, and exclusive member-only promotions.</p>
+            <div class="blog-links">
+                <a href="#" target="_blank">Join the Newsletter</a>
+                <a href="#posts">Explore the Latest Posts</a>
+            </div>
+            <div id="posts"></div>
+            <div class="blog-posts-grid">
+                <div class="blog-post">
+                    <div class="blog-post-title">Hair As Energy Work — Why Your Cut Might Be a Portal</div>
+                    <div class="blog-post-meta">By Solange Sarria • Energy & Rituals</div>
+                    <p>Hair holds memory. It carries energy. It records seasons.<br>
+                    A haircut can be a declaration, a shedding, a reset. It’s not just about inches — it’s about identity.<br>
+                    At Sodada, your hair session is a ritual in transformation. We start with intention. We cut with clarity. And we style with energy alignment.<br>
+                    Clients often report:</p>
+                    <ul>
+                        <li>Feeling emotionally lighter</li>
+                        <li>Clarity after breakups, transitions, or big decisions</li>
+                        <li>Renewed confidence and self-expression</li>
+                    </ul>
+                    <p>Your cut can be a portal — into the next version of you.</p>
+                    <div class="blog-post-cta">
+                        <a href="#" target="_blank">Book a Transformation Cut</a>
+                        <a href="#" class="secondary">Explore Energy-Based Hair Services</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-post-title">What Is Yoga Really About? (And Why It’s For Everyone)</div>
+                    <div class="blog-post-meta">By Solange Sarria • Yoga & Mindfulness</div>
+                    <p>Yoga is not a pose. It’s a path.<br>
+                    In Sanskrit, the word “yoga” means “to yoke” — to unite. It refers to the intentional practice of bringing body, breath, and consciousness into alignment. It’s not about flexibility or performance. It’s about presence.<br>
+                    At Sodada, we teach yoga as a tool for deep restoration and personal transformation. Whether you’re recovering from an injury, managing stress, or seeking spiritual grounding — yoga meets you where you are.</p>
+                    <strong>Physical Benefits:</strong>
+                    <ul>
+                        <li>Flexibility + strength without burnout</li>
+                        <li>Improved posture, balance, and core function</li>
+                        <li>Natural pain relief and joint support</li>
+                    </ul>
+                    <strong>Emotional + Mental Benefits:</strong>
+                    <ul>
+                        <li>Reduces anxiety and stress</li>
+                        <li>Improves sleep and emotional regulation</li>
+                        <li>Builds confidence and self-awareness</li>
+                    </ul>
+                    <strong>Spiritual Benefits:</strong>
+                    <ul>
+                        <li>Fosters self-trust and inner peace</li>
+                        <li>Deepens mind-body connection</li>
+                        <li>Encourages alignment with purpose</li>
+                    </ul>
+                    <p>Yoga is for everybody — and every body. And at Sodada, it’s taught with integrity, personalization, and reverence.</p>
+                    <div class="blog-post-cta">
+                        <a href="#" target="_blank">Book a Private Yoga Session</a>
+                        <a href="#" class="secondary">Read More in the Sodada Journal</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-post-title">The Art of Starting Again — Business + Life After Burnout</div>
+                    <div class="blog-post-meta">By Solange Sarria • Business & Coaching</div>
+                    <p>Burnout doesn’t mean you failed — it means your container cracked.<br>
+                    And now, you get to rebuild it with more integrity.<br>
+                    At Sodada, we support creatives, service providers, and high-achievers who are coming back to themselves. Not just in their careers — but in their bodies, relationships, and self-worth.<br>
+                    If you’ve been through:</p>
+                    <ul>
+                        <li>Overwork or toxic hustle culture</li>
+                        <li>Emotional depletion or self-doubt</li>
+                        <li>Identity loss from a major life shift</li>
+                    </ul>
+                    <p>You are not broken. You’re being called to re-align.<br>
+                    Inside our coaching container, you’ll:</p>
+                    <ul>
+                        <li>Redesign your business to match your energy</li>
+                        <li>Reset your nervous system and confidence</li>
+                        <li>Reclaim your voice, boundaries, and creative direction</li>
+                    </ul>
+                    <p>Starting over is an art form. Let’s make it beautiful.</p>
+                    <div class="blog-post-cta">
+                        <a href="#" target="_blank">Apply for Coaching</a>
+                        <a href="#" class="secondary">Book a Strategy Call</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-post-title">Why Holistic Beauty Is the Future</div>
+                    <div class="blog-post-meta">By Solange Sarria • Holistic Beauty</div>
+                    <p>Beauty is no longer just about looking good — it’s about feeling whole. At Sodada, we practice holistic beauty, which means we treat your hair, body, and nervous system as one connected system.<br>
+                    What does that mean in practice? It means:</p>
+                    <ul>
+                        <li>Using non-toxic, high-performance products that protect your health</li>
+                        <li>Approaching haircuts and color as energy resets, not just cosmetic changes</li>
+                        <li>Offering rituals that nourish the scalp, spirit, and self-confidence</li>
+                    </ul>
+                    <p>Our clients often say their appointments feel more like therapy than a salon visit. And that’s the point — we’re not here to perform beauty. We’re here to restore it, from the inside out.</p>
+                    <div class="blog-post-cta">
+                        <a href="#" target="_blank">Explore Hair Rituals</a>
+                        <a href="#" class="secondary">Book a Transformation Cut</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-post-title">Movement As Medicine</div>
+                    <div class="blog-post-meta">By Solange Sarria • Movement & Healing</div>
+                    <p>Your body holds the truth of your life. And sometimes, it takes movement to unlock it.<br>
+                    Whether it’s yoga, cycling, Muay Thai, or dancing alone in your kitchen — movement is one of the most effective tools for releasing stuck energy, processing emotions, and regaining personal power.<br>
+                    At Sodada, we treat movement as medicine. Your breath becomes your anchor. Your strength becomes your freedom.<br>
+                    In a session with Solange, you’ll learn how to:</p>
+                    <ul>
+                        <li>Reconnect to your body and energy</li>
+                        <li>Move through grief, anxiety, or stagnation</li>
+                        <li>Reclaim confidence, sensuality, and vitality</li>
+                    </ul>
+                    <p>This isn’t fitness for aesthetics. It’s movement for embodiment.</p>
+                    <div class="blog-post-cta">
+                        <a href="#" target="_blank">Book a Yoga Series</a>
+                        <a href="#" class="secondary">Join the Membership</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-post-title">Ritual Over Routine — How to Build a Lifestyle That Honors You</div>
+                    <div class="blog-post-meta">By Solange Sarria • Ritual & Lifestyle</div>
+                    <p>Routines are about doing. Rituals are about being.<br>
+                    A routine checks boxes. A ritual checks in.<br>
+                    At Sodada, we believe your life should feel like a sacred container — not a survival loop. When you infuse ritual into everyday habits, you create a lifestyle that grounds you in presence and purpose.<br>
+                    Start here:</p>
+                    <ul>
+                        <li>Light a candle before your skincare routine</li>
+                        <li>Say a prayer or intention before you step into work</li>
+                        <li>Breathe deeply before you pick up your phone</li>
+                        <li>Stretch before you speak</li>
+                    </ul>
+                    <p>A ritualized life doesn’t require perfection. It just asks for presence.</p>
+                    <div class="blog-post-cta">
+                        <a href="#" target="_blank">Download the Transformation Guide</a>
+                        <a href="#" class="secondary">Join the Sodada Membership</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-links">
+                <a href="#" target="_blank">Join the Newsletter</a>
+                <a href="https://instagram.com/sodadahair" class="secondary" target="_blank">Follow @sodadahair</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-newsletter">
+            <h3>✨ Join the Movement. Elevate Everything.</h3>
+            <p>Get curated rituals, mindset shifts, and early access to exclusive Sodada experiences — where beauty, wellness, and aligned living meet.</p>
+            <a href="#" class="cta-btn primary">I'm In</a>
+        </div>
+        <div class="footer-sitemap">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="beauty.html">Beauty</a></li>
+                <li><a href="hair.html">Hair</a></li>
+                <li><a href="wellness.html">Wellness</a></li>
+                <li><a href="yoga.html">Yoga</a></li>
+                <li><a href="coaching.html">Coaching</a></li>
+                <li><a href="memberships.html">Memberships</a></li>
+                <li><a href="signature-membership.html">Signature Membership</a></li>
+                <li><a href="academy.html">Academy</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="press.html">Press</a></li>
+                <li><a href="terms.html">Terms & Policies</a></li>
+                <li><a href="newsletter.html">Newsletter Sign-Up</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="social.html">Social Links</a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 SODADA Holistic Beauty & Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
