@@ -1,310 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SODADA Holistic Beauty & Wellness</title>
-    <link rel="stylesheet" href="css/styles.base.css">
-    <link rel="stylesheet" href="css/styles.layout.css">
-    <link rel="stylesheet" href="css/styles.sections.css">
-    <link rel="stylesheet" href="css/styles.menu.css">
-    <link rel="stylesheet" href="css/styles.mobile.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.base.css" />
+    <link rel="stylesheet" href="css/styles.layout.css" />
+    <link rel="stylesheet" href="css/styles.sections.css" />
+    <link rel="stylesheet" href="css/styles.menu.css" />
+    <link rel="stylesheet" href="css/styles.mobile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div id="nav-include"></div>
+      <div id="nav-include"></div>
     </header>
     <script>
-    // Simple HTML include for nav.html
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-include').innerHTML = data;
+      // Simple HTML include for nav.html
+      fetch("nav.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("nav-include").innerHTML = data;
 
-        // Mobile menu toggle functionality (must be inside fetch callback)
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileNav = document.querySelector('.mobile-nav');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+          // Mobile menu toggle functionality (must be inside fetch callback)
+          const mobileMenuToggle = document.querySelector(
+            ".mobile-menu-toggle"
+          );
+          const mobileNav = document.querySelector(".mobile-nav");
+          const mobileNavLinks = document.querySelectorAll(
+            ".mobile-nav-links a"
+          );
 
-        if (mobileMenuToggle && mobileNav) {
-          mobileMenuToggle.addEventListener('click', (e) => {
+          if (mobileMenuToggle && mobileNav) {
+            mobileMenuToggle.addEventListener("click", (e) => {
               e.stopPropagation();
-              mobileMenuToggle.classList.toggle('active');
-              mobileNav.classList.toggle('active');
-              if (mobileNav.classList.contains('active')) {
-                  document.body.style.overflow = 'hidden';
+              mobileMenuToggle.classList.toggle("active");
+              mobileNav.classList.toggle("active");
+              if (mobileNav.classList.contains("active")) {
+                document.body.style.overflow = "hidden";
               } else {
-                  document.body.style.overflow = '';
+                document.body.style.overflow = "";
               }
-          });
+            });
 
-          // Close mobile menu when a link is clicked
-          mobileNavLinks.forEach(link => {
-              link.addEventListener('click', () => {
-                  mobileMenuToggle.classList.remove('active');
-                  mobileNav.classList.remove('active');
-                  document.body.style.overflow = '';
+            // Close mobile menu when a link is clicked
+            mobileNavLinks.forEach((link) => {
+              link.addEventListener("click", () => {
+                mobileMenuToggle.classList.remove("active");
+                mobileNav.classList.remove("active");
+                document.body.style.overflow = "";
               });
-          });
+            });
 
-          // Close mobile menu when clicking outside
-          document.addEventListener('click', (e) => {
-              if (!mobileMenuToggle.contains(e.target) && !mobileNav.contains(e.target)) {
-                  mobileMenuToggle.classList.remove('active');
-                  mobileNav.classList.remove('active');
-                  document.body.style.overflow = '';
+            // Close mobile menu when clicking outside
+            document.addEventListener("click", (e) => {
+              if (
+                !mobileMenuToggle.contains(e.target) &&
+                !mobileNav.contains(e.target)
+              ) {
+                mobileMenuToggle.classList.remove("active");
+                mobileNav.classList.remove("active");
+                document.body.style.overflow = "";
               }
-          });
-        }
-      });
+            });
+          }
+        });
     </script>
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Sodada Holistic Beauty & Wellness</h1>
-                    <h2 class="hero-subtitle">Where Beauty Meets Breath. Where Craft Becomes Ritual.</h2>
-                    <p class="hero-description">Welcome to Sodada, where holistic beauty meets intentional living. Through expert hair artistry, yoga, and coaching, Sodada creates a space for embodied transformation and the next evolution of you.</p>
-                    <p class="hero-tagline">Live well. Look well. Be well.</p>
-                    <a href="https://www.fresha.com/book-now/sodada-ftq5k815/services?oiid=sv%3A10349758&share&pId=376813" class="cta-btn primary" target="_blank">Book Complimentary Discovery Call</a>
-                </div>
-                <div class="hero-image">
-                    <!-- Replace with actual hero image if available -->
-                    <img src="/css/assets/images/image1.jpg" alt="Sodada Hero" style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 4px 24px rgba(26, 48, 64, 0.1);">
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Services Preview (Wireframe style) -->
-        <section id="featured-preview" class="featured-preview">
-            <div class="section-header">
-                <h2>Featured Services Preview</h2>
-            </div>
-            <ul class="featured-list">
-                <li>Haircuts from $122</li>
-                <li>Yoga from $122</li>
-                <li>Coaching from $333/month</li>
-            </ul>
-            <a href="#services" class="cta-btn secondary">View All Services</a>
-        </section>
-
-        <!-- Image under Featured Services -->
-        <div class="featured-image" style="text-align:center; margin: 2rem 0;">
-            <img src="css/assets/images/image2.jpg" alt="Sodada Featured" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(26, 48, 64, 0.1);">
+      <!-- Hero Header Section (Full-width image with overlay and button) -->      <section id="hero" class="hero-header">
+        <img
+          src="css/assets/images/memberships/Sol_redlip2.jpg"
+          alt="Sodada Hero"
+          class="hero-bg-img"
+        />
+        <div class="hero-overlay">
+          <div class="hero-content-wrapper">
+            <h2 class="hero-header-title">
+              Where Beauty Meets Breath. Where Craft Becomes Ritual.
+            </h2>
+            <a
+              href="https://www.fresha.com/book-now/sodada-ftq5k815/services?oiid=sv%3A10349758&share&pId=376813"
+              class="hero-header-btn"
+              target="_blank"
+              >Services</a
+            >
+          </div>
         </div>
+      </section>
 
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials">
-            <div class="section-header">
-                <h2>Real Clients, Real Stories</h2>
-                <p class="testimonials-subheadline">From thoughtful follow-ups to five-star reviews, these stories reflect the personalized care, connection, and elevated experience at the heart of Sodada.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-category">Wellness / Yoga</div>
-                    <blockquote>“In just 3 months, I’m seeing a huge difference in my mobility, stability, and most importantly mind-body connection. I’m noticing a decrease in anxiety and living more mindfully. Solange tailors each session based on my needs and past injuries. I can’t recommend her enough.”</blockquote>
-                    <cite>— Ruta S.</cite>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-category">Hair / Beauty</div>
-                    <blockquote>“Every cut and color session has felt like a collaboration and a learning experience. Solange gently guides with artistic vision and always makes me feel beautiful and confident. Her background in art helps her create magic with hair.”</blockquote>
-                    <cite>— Aline S.</cite>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-category">Coaching / Business</div>
-                    <blockquote>“This mastermind is like therapy, but for your business. I went from overwhelmed and unsure to clear, focused, and supported. Solange always drops the truth bomb I need to keep moving forward.”</blockquote>
-                    <cite>— Pati L.</cite>
-                </div>
-            </div>
-            <div class="testimonials-cta">
-                <a href="#" class="cta-btn secondary">Read More Client Stories &rarr;</a>
-            </div>
-        </section>
-
-        <!-- Image above As Seen In -->
-        <div class="as-seen-image" style="text-align:center; margin: 2rem 0;">
-            <img src="css/assets/images/image4.jpg" alt="Sodada Mood" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(26, 48, 64, 0.1);">
+      <!-- ...existing code... -->
+      <section id="featured-preview" class="featured-preview">
+        <div class="section-header">
+          <h2>Featured Services Preview</h2>
         </div>
+        <ul class="featured-list">
+          <li>Haircuts from $122</li>
+          <li>Yoga from $122</li>
+          <li>Coaching from $333/month</li>
+        </ul>
+        <a href="#services" class="cta-btn secondary">View All Services</a>
+      </section>
 
+      <!-- Image under Featured Services -->
+      <div class="featured-image" style="text-align: center; margin: 2rem 0">
+        <img
+          src="css/assets/images/image2.jpg"
+          alt="Sodada Featured"
+          style="
+            max-width: 420px;
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(26, 48, 64, 0.1);
+          "
+        />
+      </div>
 
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials">
+        <div class="section-header">
+          <h2>Real Clients, Real Stories</h2>
+          <p class="testimonials-subheadline">
+            From thoughtful follow-ups to five-star reviews, these stories
+            reflect the personalized care, connection, and elevated experience
+            at the heart of Sodada.
+          </p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-category">Wellness / Yoga</div>
+            <blockquote>
+              “In just 3 months, I’m seeing a huge difference in my mobility,
+              stability, and most importantly mind-body connection. I’m noticing
+              a decrease in anxiety and living more mindfully. Solange tailors
+              each session based on my needs and past injuries. I can’t
+              recommend her enough.”
+            </blockquote>
+            <cite>— Ruta S.</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-category">Hair / Beauty</div>
+            <blockquote>
+              “Every cut and color session has felt like a collaboration and a
+              learning experience. Solange gently guides with artistic vision
+              and always makes me feel beautiful and confident. Her background
+              in art helps her create magic with hair.”
+            </blockquote>
+            <cite>— Aline S.</cite>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-category">Coaching / Business</div>
+            <blockquote>
+              “This mastermind is like therapy, but for your business. I went
+              from overwhelmed and unsure to clear, focused, and supported.
+              Solange always drops the truth bomb I need to keep moving
+              forward.”
+            </blockquote>
+            <cite>— Pati L.</cite>
+          </div>
+        </div>
+        <div class="testimonials-cta">
+          <a href="#" class="cta-btn secondary"
+            >Read More Client Stories &rarr;</a
+          >
+        </div>
+      </section>
 
-        <!-- Press Section (Modernized) -->
-        <section id="press" class="press">
-            <div class="section-header">
-                <h2>Press</h2>
-                <p>Explore the stories and features that highlight Sodada's journey and impact.</p>
-            </div>
-            <div class="press-grid">
-                <div class="press-item">
-                    <span class="press-icon" title="Press Feature">📰</span>
-                    <a href="https://canvasrebel.com/meet-solange-sarria/" target="_blank">
-                        Canvas Rebel: Meet Solange Sarria
-                    </a>
-                </div>
-                <div class="press-item">
-                    <span class="press-icon" title="Press Feature">📰</span>
-                    <a href="https://jameslanepost.com/highlights-from-miami-art-week/12/21/2021/Hamptons-News-Happenings" target="_blank">
-                        James Lane Post: Highlights from Miami Art Week
-                    </a>
-                </div>
-                <div class="press-item">
-                    <span class="press-icon" title="Press Feature">📰</span>
-                    <a href="https://www.therealstate.co/episodes/episode-31-hair-exte" target="_blank">
-                        The Real State: Episode 31
-                    </a>
-                </div>
-                <div class="press-item">
-                    <span class="press-icon" title="Press Feature">📰</span>
-                    <a href="https://voyagemia.com/interview/meet-solange-sarria-sodada-salon-edgewater/" target="_blank">
-                        VoyageMIA: Meet Solange Sarria
-                    </a>
-                </div>
-                <div class="press-item">
-                    <span class="press-icon" title="Press Feature">📰</span>
-                    <a href="http://www.miaminewtimes.com/arts/100-creatives-solange-sarria-finds-art-in-the-beauty-industry-9002165" target="_blank">
-                        Miami New Times: 100 Creatives
-                    </a>
-                </div>
-                <div class="press-item">
-                    <span class="press-icon" title="Press Feature">📰</span>
-                    <a href="http://www.miaminewtimes.com/best-of/2015/shopping-and-services/best-hair-salon-7682437" target="_blank">
-                        Miami New Times: Best Hair Salon
-                    </a>
-                </div>
-            </div>
-        </section>
+      <!-- Image above As Seen In -->
+      <div class="as-seen-image" style="text-align: center; margin: 2rem 0">
+        <img
+          src="css/assets/images/image4.jpg"
+          alt="Sodada Mood"
+          style="
+            max-width: 420px;
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(26, 48, 64, 0.1);
+          "
+        />
+      </div>
 
-        <style>
-        /* Modern Press Section Styles */
+      <!-- Press Section (Modernized) -->
+      <section id="press" class="press">
+        <div class="section-header">
+          <h2>Press</h2>
+          <p>
+            Explore the stories and features that highlight Sodada's journey and
+            impact.
+          </p>
+        </div>
+        <div class="press-grid">
+          <div class="press-item">
+            <span class="press-icon" title="Press Feature">📰</span>
+            <a
+              href="https://canvasrebel.com/meet-solange-sarria/"
+              target="_blank"
+            >
+              Canvas Rebel: Meet Solange Sarria
+            </a>
+          </div>
+          <div class="press-item">
+            <span class="press-icon" title="Press Feature">📰</span>
+            <a
+              href="https://jameslanepost.com/highlights-from-miami-art-week/12/21/2021/Hamptons-News-Happenings"
+              target="_blank"
+            >
+              James Lane Post: Highlights from Miami Art Week
+            </a>
+          </div>
+          <div class="press-item">
+            <span class="press-icon" title="Press Feature">📰</span>
+            <a
+              href="https://www.therealstate.co/episodes/episode-31-hair-exte"
+              target="_blank"
+            >
+              The Real State: Episode 31
+            </a>
+          </div>
+          <div class="press-item">
+            <span class="press-icon" title="Press Feature">📰</span>
+            <a
+              href="https://voyagemia.com/interview/meet-solange-sarria-sodada-salon-edgewater/"
+              target="_blank"
+            >
+              VoyageMIA: Meet Solange Sarria
+            </a>
+          </div>
+          <div class="press-item">
+            <span class="press-icon" title="Press Feature">📰</span>
+            <a
+              href="http://www.miaminewtimes.com/arts/100-creatives-solange-sarria-finds-art-in-the-beauty-industry-9002165"
+              target="_blank"
+            >
+              Miami New Times: 100 Creatives
+            </a>
+          </div>
+          <div class="press-item">
+            <span class="press-icon" title="Press Feature">📰</span>
+            <a
+              href="http://www.miaminewtimes.com/best-of/2015/shopping-and-services/best-hair-salon-7682437"
+              target="_blank"
+            >
+              Miami New Times: Best Hair Salon
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        /* Hero Header Styles */        .hero-header {
+          position: relative;
+          width: 100%;
+          height: 80vh;
+          min-height: 550px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+        }
+        .hero-bg-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: top center;
+          z-index: 1;
+        }        .hero-overlay {
+          position: relative;
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255, 255, 255, 0.1);
+          text-align: center;
+        }
+        .hero-content-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 800px;
+          padding: 2rem;
+        }
+        .hero-logo {
+          margin-bottom: 2rem;
+        }
+        .hero-logo img {
+          max-width: 180px;
+          background: white;
+          padding: 12px 16px;
+          border-radius: 8px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }        .hero-header-title {
+          font-family: "Poppins", sans-serif;
+          font-size: 2.5rem;
+          font-weight: 600;
+          color: #1a3040;
+          margin: 1.5rem 0;
+          max-width: 80%;
+          line-height: 1.3;
+          letter-spacing: -0.01em;
+          background-color: rgba(255, 255, 255, 0.7);
+          padding: 1rem;
+          border-radius: 8px;
+        }
+        .hero-header-btn {
+          background: linear-gradient(90deg, #e7b8e6 0%, #b6e3e1 100%);
+          color: #fff;
+          padding: 0.8em 2.8em;
+          border-radius: 30px;
+          font-weight: 600;
+          font-size: 1.1rem;
+          margin-top: 1.5rem;
+          box-shadow: 0 4px 16px rgba(26, 48, 64, 0.15);
+          text-decoration: none;
+          transition: transform 0.2s, box-shadow 0.2s;
+          border: none;
+          display: inline-block;
+        }
+        .hero-header-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 22px rgba(26, 48, 64, 0.25);
+        }
+        @media (max-width: 768px) {
+          .hero-header {
+            height: 60vh;
+            min-height: 450px;
+          }
+          .hero-header-title {
+            font-size: 1.8rem;
+            max-width: 90%;
+          }
+        }
+        @media (max-width: 480px) {
+          .hero-header {
+            height: 50vh;
+            min-height: 350px;
+          }
+          .hero-header-title {
+            font-size: 1.4rem;
+          }
+          .hero-logo img {
+            max-width: 140px;
+          }
+          .hero-content-wrapper {
+            padding: 1rem;
+          }
+        }
+        /* ...existing Press Section Styles... */
         .press {
-            background: linear-gradient(120deg, #f9f9f9 80%, #e0e5e8 100%);
-            padding: 2.5rem 1.5rem;
-            border-radius: 18px;
-            box-shadow: 0 6px 32px rgba(26, 48, 64, 0.08);
-            margin: 2.5rem auto 2rem auto;
-            max-width: 1200px;
+          background: linear-gradient(120deg, #f9f9f9 80%, #e0e5e8 100%);
+          padding: 2.5rem 1.5rem;
+          border-radius: 18px;
+          box-shadow: 0 6px 32px rgba(26, 48, 64, 0.08);
+          margin: 2.5rem auto 2rem auto;
+          max-width: 1200px;
         }
         .press .section-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
+          text-align: center;
+          margin-bottom: 2.5rem;
         }
         .press .section-header h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--sodada-charcoal);
-            letter-spacing: 0.01em;
+          font-size: 2.2rem;
+          font-weight: 700;
+          color: var(--sodada-charcoal);
+          letter-spacing: 0.01em;
         }
         .press .section-header p {
-            font-size: 1.08rem;
-            color: #6a6a6a;
-            margin-top: 0.5rem;
+          font-size: 1.08rem;
+          color: #6a6a6a;
+          margin-top: 0.5rem;
         }
         .press-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem 1.5rem;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 2rem 1.5rem;
         }
         .press-item {
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 2px 16px rgba(26, 48, 64, 0.07);
-            padding: 2rem 1.5rem 1.5rem 1.5rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 1.1rem;
-            transition: box-shadow 0.18s, transform 0.18s, border 0.18s;
-            border: 1.5px solid #e0e5e8;
-            position: relative;
+          background: #fff;
+          border-radius: 14px;
+          box-shadow: 0 2px 16px rgba(26, 48, 64, 0.07);
+          padding: 2rem 1.5rem 1.5rem 1.5rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 1.1rem;
+          transition: box-shadow 0.18s, transform 0.18s, border 0.18s;
+          border: 1.5px solid #e0e5e8;
+          position: relative;
         }
         .press-item:hover {
-            box-shadow: 0 8px 32px rgba(26, 48, 64, 0.13);
-            transform: translateY(-4px) scale(1.025);
-            border: 1.5px solid #b8c4ce;
+          box-shadow: 0 8px 32px rgba(26, 48, 64, 0.13);
+          transform: translateY(-4px) scale(1.025);
+          border: 1.5px solid #b8c4ce;
         }
         .press-icon {
-            font-size: 1.7rem;
-            color: var(--sodada-navy);
-            flex-shrink: 0;
-            margin-top: 0.1rem;
-            filter: drop-shadow(0 1px 2px #e0e0e0);
+          font-size: 1.7rem;
+          color: var(--sodada-navy);
+          flex-shrink: 0;
+          margin-top: 0.1rem;
+          filter: drop-shadow(0 1px 2px #e0e0e0);
         }
         .press-item a {
-            text-decoration: none;
-            color: var(--sodada-navy);
-            font-weight: 600;
-            font-size: 1.08rem;
-            letter-spacing: 0.01em;
-            transition: color 0.18s;
+          text-decoration: none;
+          color: var(--sodada-navy);
+          font-weight: 600;
+          font-size: 1.08rem;
+          letter-spacing: 0.01em;
+          transition: color 0.18s;
         }
         .press-item a:hover {
-            color: var(--sodada-navy-light);
-            text-decoration: underline;
+          color: var(--sodada-navy-light);
+          text-decoration: underline;
         }
         @media (max-width: 600px) {
-            .press {
-                padding: 1.2rem 0.2rem;
-            }
-            .press-grid {
-                gap: 1.1rem 0.5rem;
-            }
-            .press-item {
-                padding: 1.2rem 0.7rem 1rem 0.7rem;
-            }
+          .press {
+            padding: 1.2rem 0.2rem;
+          }
+          .press-grid {
+            gap: 1.1rem 0.5rem;
+          }
+          .press-item {
+            padding: 1.2rem 0.7rem 1rem 0.7rem;
+          }
         }
-        </style>
+      </style>
 
-        <!-- Instagram Feed Section -->
-        <section id="instagram" class="instagram-feed">
-            <div class="section-header">
-                <h2>Instagram</h2>
-            </div>
-            <!-- Elfsight Instagram Feed | Sodada IG feed -->
-            <script src="https://static.elfsight.com/platform/platform.js" async></script>
-            <div class="elfsight-app-1754ee3c-4bc3-488d-a1ac-d595a11227c7" data-elfsight-app-lazy></div>
-        </section>
+      <!-- Instagram Feed Section -->
+      <section id="instagram" class="instagram-feed">
+        <div class="section-header">
+          <h2>Instagram</h2>
+        </div>
+        <!-- Elfsight Instagram Feed | Sodada IG feed -->
+        <script
+          src="https://static.elfsight.com/platform/platform.js"
+          async
+        ></script>
+        <div
+          class="elfsight-app-1754ee3c-4bc3-488d-a1ac-d595a11227c7"
+          data-elfsight-app-lazy
+        ></div>
+      </section>
     </main>
 
     <!-- Image above Footer -->
-    <div class="footer-image" style="text-align:center; margin: 2rem 0;">
-        <img src="css/assets/images/image3.jpg" alt="Sodada Mood" style="max-width: 420px; width: 100%; border-radius: 14px; box-shadow: 0 4px 24px rgba(26, 48, 64, 0.1);">
+    <div class="footer-image" style="text-align: center; margin: 2rem 0">
+      <img
+        src="css/assets/images/image3.jpg"
+        alt="Sodada Mood"
+        style="
+          max-width: 420px;
+          width: 100%;
+          border-radius: 14px;
+          box-shadow: 0 4px 24px rgba(26, 48, 64, 0.1);
+        "
+      />
     </div>
 
     <footer>
-        <div class="footer-newsletter">
-            <h3>✨ Join the Movement. Elevate Everything.</h3>
-            <p>Get curated rituals, mindset shifts, and early access to exclusive Sodada experiences — where beauty, wellness, and aligned living meet.</p>
-            <a href="#" class="cta-btn primary">I'm In</a>
-        </div>
-        <div class="footer-sitemap">
-            <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#beauty">Beauty</a></li>
-                <li><a href="#hair">Hair</a></li>
-                <li><a href="#wellness">Wellness</a></li>
-                <li><a href="#yoga">Yoga</a></li>
-                <li><a href="#coaching">Coaching</a></li>
-                <li><a href="#memberships">Memberships</a></li>
-                <li><a href="#signature-membership">Signature Membership</a></li>
-                <li><a href="#academy">Academy</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#press">Press</a></li>
-                <li><a href="#terms">Terms & Policies</a></li>
-                <li><a href="#newsletter">Newsletter Sign-Up</a></li>
-                <li><a href="#locations">Locations</a></li>
-                <li><a href="#social">Social Links</a></li>
-            </ul>
-        </div>
-        <div class="footer-copyright">
-            <p>&copy; 2025 SODADA Holistic Beauty & Wellness. All rights reserved.</p>
-        </div>
+      <div class="footer-newsletter">
+        <h3>✨ Join the Movement. Elevate Everything.</h3>
+        <p>
+          Get curated rituals, mindset shifts, and early access to exclusive
+          Sodada experiences — where beauty, wellness, and aligned living meet.
+        </p>
+        <a href="#" class="cta-btn primary">I'm In</a>
+      </div>
+      <div class="footer-sitemap">
+        <ul class="footer-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#beauty">Beauty</a></li>
+          <li><a href="#hair">Hair</a></li>
+          <li><a href="#wellness">Wellness</a></li>
+          <li><a href="#yoga">Yoga</a></li>
+          <li><a href="#coaching">Coaching</a></li>
+          <li><a href="#memberships">Memberships</a></li>
+          <li><a href="#signature-membership">Signature Membership</a></li>
+          <li><a href="#academy">Academy</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#press">Press</a></li>
+          <li><a href="#terms">Terms & Policies</a></li>
+          <li><a href="#newsletter">Newsletter Sign-Up</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#social">Social Links</a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <p>
+          &copy; 2025 SODADA Holistic Beauty & Wellness. All rights reserved.
+        </p>
+      </div>
     </footer>
-
-    
-</body>
+  </body>
 </html>
